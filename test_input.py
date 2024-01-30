@@ -1,38 +1,75 @@
 import requests
 
-#dictionaries for reference
-dict = {}
-nature = [
-  "Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid",
-]
-stats = ["Atk", "HP","Def","SpA","SpD"]
-#start of user input
 
-nick = input("Nickname?")
-poke_lvl = input("Pokemon and level?")
-input1 = input1.split()
-while True:
-  input2 = input("Nature?")
+
+
+def input_checker():
   
-  if input2 in nature:
-    while True: 
-      input3 = input("How was it trained?")
-      input3 = input3.split()
-      if input3[0] in stats and input3[1] in stats:
+  #dictionaries for reference
+  dict = {}
+  all_natures = [
+    "Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid",
+  ]
+  stats = ["Atk", "HP","Def","SpA","SpD","Spe"]
+  
+  #Nickname, poke, level?
+  nick = input("Nickname?")
+  poke_lvl = input("Pokemon and level?")
+  poke_lvl = poke_lvl.split()
+  
+  #Nature loop
+  while True:
+    add_nat = input("Nature?")
+    if add_nat in all_natures:
+      break
 
-while True:
-  input4 = input("\nMoves learned?\n")
-  with open("list_of_moves.txt") as file:
-    contents = file.read()
-    if input4 in contents:
-    
-      dict["Poke"] = poke_lvl[0]
-      dict["Name"] = nick
-      dict["Lv"] = poke_lvl[1]
-      dict["Ntr"] = input2
-      dict["Tra1"] = input3[0]
-      dict["Tra2"] = input3[1]
-      dict["Ab"] = input2[0]  
+  #stat checker
+  flag = 1
+  while flag: 
+    temp_stats = []
+    add_stats = input("How was it trained?")
+    add_stats = add_stats.split()
+    flag = 0
 
-      for i in dict.items():
-        print(i)
+    for x in add_stats:
+      if x not in stats:
+        flag = 1
+  temp_stats.append(add_stats)
+  #Ability checker
+  
+  while True:
+    get_ability = input("Ability?")
+    with open("list_of_abilities.txt") as file:
+      contents = file.read()
+      if get_ability in contents:
+        break
+  
+  #Move checker
+  temp_moves = []
+  while True:
+    if len(temp_moves) == 4:
+      break
+    add_moves = input("\nMoves learned?\n")
+    with open("list_of_moves.txt") as file:
+      contents = file.read()
+      if add_moves in contents:
+        temp_moves.append(add_moves)
+        continue
+      
+  #dictionary adder            
+  db["CJ"["all_moves"]] = temp_moves
+  db["CJ"["poke"]] = poke_lvl[0]
+  db["CJ"["name"]] = nick
+  db["CJ"["lv"]] = poke_lvl[1]
+  db["CJ"["ntr"]] = add_nat
+  db["CJ"["tra1"]] = add_stats[0]
+  db["CJ"["tra2"]] = add_stats[1]
+  db["CJ"["abil"]] = get_ability
+  for i in db["CJ"].items():
+    print(i)
+  
+'''
+To do:
+- Redefining 
+
+'''

@@ -1,43 +1,45 @@
 #the goal of the dictionary when creating it
+'''
 di = {
   "CJ": { "Name": "Henry",
           "Poke": "Rattata",
           "Lv":"50",
           "Ntr":"Hasty",
-          "Tra1":"HP",
-          "Tra2": "Spd",
+          "stats": ["HP","Spd", "Spe"],
           "Ab": "Runaway",
-          "Mv1": "Acid Spray",
-          "Mv2": "Aromatherapy",
-          "Mv3": "Burning Jealousy",
-          "Mv4": "Behemoth Bash",
+          "all_moves": ["Acid Spray", "Aromatherapy","Burning Jealousy", "Behemoth Bash"]
           "IVs":
         ["10","11","12","13","14"]
        }
 }
+'''
 
-#a loop to ask who needs a pokemon stat sheet
-while True:
-  p = input("Person?")
-  if p == "CJ":
-      while True:
-        poke = input("What pokemon do you need?")
-#The stat sheet output for Pokemon Unbound Damage Calc specifically
-        if poke == di[p]["Poke"]:
-          print(di[p]["Poke"])
-          print("Level:", di[p]["Lv"])
-          print(di[p]["Ntr"],"Nature")
-          print("Ability:",di[p]["Ab"])
-          print("EVs: 252",di[p]["Tra1"],"/","252",di[p]["Tra2"])
-          print("IVs:",di[p]["IVs"][0],"HP /",di[p]["IVs"][1],"Atk /",di[p]["IVs"][2],"Def /",di[p]["IVs"][3],"SpA /",di[p]["IVs"][4],"SpD")
-          print("-",di[p]["Mv1"])
-          print("-",di[p]["Mv2"])
-          print("-",di[p]["Mv3"])
-          print("-",di[p]["Mv4"])
-          break
-        else:
-          print("try again")
-          continue
+def calc_export():
+  while True:
+    p = input("Person?")
+    if p == "CJ":
+        while True:
+          poke = input("What pokemon do you need?")
+  #The stat sheet output for Pokemon Unbound Damage Calc specifically
+          if poke == db["CJ"]["Poke"]:
+            print(db["CJ"]["Poke"])
+            print("Level:", db["CJ"]["Lv"])
+            print(db["CJ"]["Ntr"],"Nature")
+            print("Ability:",db["CJ"]["Ab"])
+            #change the ability for 3.. EVs: 128 HP / 128 Atk / 252 SpD
+            if len(db["CJ"]["EVs"]) == 3:
+              print("EVs: 252",,db["CJ"]["stats"[0]],"/","126",db["CJ"]["stats"[1]],"/","126",db["CJ"]["stats"[2]])
+            else:
+              print("EVs: 252",db["CJ"]["stats"[0]],"/","252",db["CJ"]["stats"[1]])
+            print("IVs:",db["CJ"]["IVs"][0],"HP /",db["CJ"]["IVs"][1],"Atk /",db["CJ"]["IVs"][2],"Def /",db["CJ"]["IVs"][3],"SpA /",db["CJ"]["IVs"][4],"SpD")
+            print("-",db["CJ"]["Mv1"])
+            print("-",db["CJ"]["Mv2"])
+            print("-",db["CJ"]["Mv3"])
+            print("-",db["CJ"]["Mv4"])
+            break
+          else:
+            print("try again")
+            continue
     
 '''
 #Glossary 
