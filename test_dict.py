@@ -1,5 +1,4 @@
-from test_input import library
-
+#the goal of the dictionary when creating it
 di = {
   "CJ": { "Name": "Henry",
           "Poke": "Rattata",
@@ -16,11 +15,14 @@ di = {
         ["10","11","12","13","14"]
        }
 }
+
+#a loop to ask who needs a pokemon stat sheet
 while True:
   p = input("Person?")
   if p == "CJ":
       while True:
         poke = input("What pokemon do you need?")
+#The stat sheet output for Pokemon Unbound Damage Calc specifically
         if poke == di[p]["Poke"]:
           print(di[p]["Poke"])
           print("Level:", di[p]["Lv"])
@@ -38,9 +40,8 @@ while True:
           continue
     
 '''
-
+#Glossary 
 d.get(<key>[, <default>])
-
 d.clear()
 d.items() Returns a list of key-value pairs in a dictionary.
 d.pop(<key>[, <default>]) Removes a key from a dictionary, if it is present, and returns its value.
