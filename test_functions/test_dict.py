@@ -4,35 +4,36 @@ import json
 
 def calc_export():
   while True:
-    p = input("Person?")
-    if p == "CJ":
-      print("Current pokemon:",db["CJ"]["poke"])
-      x = []
-      y = []
-      x = json.loads(db.get_raw("CJ")).get("stats")[0]
-      y = (json.loads(db.get_raw("CJ")).get("ivs"))
-      while True:
-        poke = input("What pokemon do you need?")
-#The stat sheet output for Pokemon Unbound Damage Calc specifically
-        if poke == db["CJ"]["poke"]:
-          print(db["CJ"]["poke"])
-          print("Level:", db["CJ"]["lv"])
-          print(db["CJ"]["ntr"],"Nature")
-          print("Ability:",db["CJ"]["abil"])
-          print("EVs: 252",x[0],"/","252",x[1])
-          print("IVs:",y[0],"HP /",y[1],"Atk /",y[2],"Def /",y[3],"SpA /",y[4],"SpD","/",y[5],"Spe")
-          for i in db["CJ"]["all_moves"]:
-            print("-",i)
-          break
+    na = input("For whom?")
+    if na == "CJ" or na == "Doug" or na == "Sam":
       break
+  print("Current pokemon:")
+  temp_poke = []
+  for i in db[na].keys():
+    temp_poke.append(i)
+    print(i)
+  while True:
+    poke = input("\nWhat pokemon do you need? (Enter nickname) \n")
+    if poke in temp_poke:
+      break
+  #Printing the calc format
+  x = []
+  y = []
+  x = json.loads(db.get_raw(na)).get(poke).get("stats")[0]
+  y = json.loads(db.get_raw(na)).get(poke).get("ivs")
+  print(db[na][poke]["poke"])
+  print("Level:", db[na][poke]["lv"])
+  print(db[na][poke]["ntr"],"Nature")
+  print("Ability:",db[na][poke]["abil"])
+  print("EVs: 252",x[0],"/","252",x[1])
+  print("IVs:",y[0],"HP /",y[1],"Atk /",y[2],"Def /",y[3],"SpA /",y[4],"SpD","/",y[5],"Spe")
+  for i in db[na][poke]["all_moves"]:
+    print("-",i)
+  
+  
 
 
 
 '''
-#BUG - EV's - Problem with this is that we cannot check the length of db["CJ"]["stats"] because the actual length is 1, no matter the list. the database here saves the items in an observed list. 
-ObservedList(value=[ObservedList(value=['HP', 'HP'])])
-
-So what needs to be done is converting the Json to a list then checking the length. 
-
-#IMPROVE - adding the set.raw to the input so that it automatically, theoretically, converts the list into a list instead of  Json notation...
+Adding the functionality of 3 ways it's trained
 '''

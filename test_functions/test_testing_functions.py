@@ -2,22 +2,18 @@
 from replit import db
 import json
 
-print(json.loads(db.get_raw("CJ")).get("ivs"))
-x = []
-y = []
-x = (json.loads(db.get_raw("CJ")).get("ivs"))
-print(x)
-print(x[0],x[1])
+  
+person = input("For whom?\n")
+print(db.get_raw(person))
 
-y = json.loads(db.get_raw("CJ")).get("stats")[0]
-print(y[0],y[1])
-
-
-
-db = {
-  "CJ":
-  {
-    "Poke": "Magikarp",
-    "nick":"Henry",
-  }
-}
+while True:
+  try:
+    for i in db[person].keys():
+      print(i)
+    delete_mon = input("Which mon\n")
+    if delete_mon in db[temp_name].keys():
+      print(db[temp_name].pop(delete_mon))
+      break
+  except KeyError:
+    continue
+    "try again"

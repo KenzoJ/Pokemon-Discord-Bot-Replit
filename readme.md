@@ -29,3 +29,13 @@ Exporting the data into a CSV for later and clearing out anydatabase.
     Type calculator: ex. Charizard: Weak to WAT, ELE, ROC x4
     Move questioniare
     Accessing some unbound specific API's
+
+
+
+
+### Current Feature Focuses
+- Ability to ad multiple pokemon
+- Make a branch for testing
+- 
+- Make code accessible to discord bot
+- 
