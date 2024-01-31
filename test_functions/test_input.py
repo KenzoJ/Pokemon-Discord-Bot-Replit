@@ -102,6 +102,7 @@ def input_checker():
   db[dict_name][ni]["stats"] = temp_stats
   db[dict_name][ni]["abil"] = get_ability
   db[dict_name][ni]["ivs"] = temp_iv
+  print("Successfully added!")
   sys.exit()
 
 if __name__ == "__test_input__":

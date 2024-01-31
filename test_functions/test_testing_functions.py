@@ -2,10 +2,13 @@
 from replit import db
 import json
 
-  
 person = input("For whom?\n")
+print(db.keys(),"\n")
+print(db[person].keys(),"\n")
 print(db.get_raw(person))
-
+print("All mons:\n",json.loads(db.get_raw(person)))
+print(json.loads(db.get_raw(person)).get("Magy"))
+'''
 while True:
   try:
     for i in db[person].keys():
@@ -17,3 +20,4 @@ while True:
   except KeyError:
     continue
     "try again"
+'''
