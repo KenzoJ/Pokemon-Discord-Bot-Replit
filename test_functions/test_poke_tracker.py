@@ -23,12 +23,13 @@ def main():
   if x == "del mon":
     while True:
       try:
-        temp_name = input("For whom?\n")
-        for i in db[temp_name].keys():
+        person = input("For whom?\n")
+        for i in db[person].keys():
           print(i)
-        delete_mon = input("Which mon\n")
-        if delete_mon in db[temp_name].keys():
-          print(db[temp_name].pop(delete_mon))
+        delete_mon = input("\nWhich mon\n")
+        if delete_mon in db[person].keys():
+          del db[person][delete_mon]
+          print("It's gone")
           break
       except KeyError:
         continue
@@ -37,5 +38,4 @@ def main():
     
     
 main()
-
 ##REALLY RECOMMEND reading through https://replit-py.readthedocs.io/en/latest/db_tutorial.html for an understanding on the datbase. 

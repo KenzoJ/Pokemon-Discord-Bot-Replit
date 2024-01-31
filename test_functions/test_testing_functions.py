@@ -2,13 +2,31 @@
 from replit import db
 import json
 
-person = input("For whom?\n")
+person = "CJ"
 print(db.keys(),"\n")
-print(db[person].keys(),"\n")
+
+for i in db.keys():
+  print(i)
+for i in db[person].keys():
+  print(i)
 print(db.get_raw(person))
-print("All mons:\n",json.loads(db.get_raw(person)))
-print(json.loads(db.get_raw(person)).get("Magy"))
+
+x = input("Delete mon?")
+#works!
+del db[person][x]
+print("Success!")
+
+#also works
+print(db[person].pop(x))
+
 '''
+dict['user'].pop(0)
+print(db.pop("a"))
+
+print("All mons:
+\n",json.loads(db.get_raw(person)))
+print(json.loads(db.get_raw(person)).get("Magy"))
+
 while True:
   try:
     for i in db[person].keys():
