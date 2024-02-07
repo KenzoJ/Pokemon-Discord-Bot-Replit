@@ -3,7 +3,6 @@ from replit import db
 import sys
 
 def add_mon():
-
   #dictionaries for reference
   dict = {}
   all_natures = [
@@ -30,6 +29,7 @@ def add_mon():
   }
 #Making first database based off of three names.
   while True:
+    print(db["CJ"]["Magi"].items())
     dict_name = input("For CJ, Doug, or Sam?")
     if dict_name == "CJ" or dict_name == "Doug" or dict_name == "Sam":
       break
@@ -103,12 +103,16 @@ def add_mon():
   db[dict_name][ni]["abil"] = get_ability
   db[dict_name][ni]["ivs"] = temp_iv
   print("Successfully added!")
+
   sys.exit()
 
-if __name__ == "__add_mon__":
+
+
+if __name__ == "__main__":
     add_mon()
 '''
 This is for checking the export. 
+
 for i in db[dict_name][ni].items():
   print(i)
 '''

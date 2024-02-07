@@ -1,8 +1,18 @@
 from replit import db
 import json
 
-
 def del_mon():
+
+  if x == "erase all":
+    if "Sam" in db.keys():
+      del db["Sam"]
+    if "Doug" in db.keys():
+      del db["Doug"]
+    if "CJ" in db.keys():
+      del db["CJ"]
+    else:
+      print("Bitch empty")
+      sys.exit
   try:
     person = input("For whom?\n")
     for i in db[person].keys():

@@ -22,5 +22,6 @@ async def on_message(message):
     await message.channel.send(get_response(message.content)) 
   except ValueError:
     print("Error")
- 
+
+
 client.run(os.environ['SECRET_BOT_KEY'])
