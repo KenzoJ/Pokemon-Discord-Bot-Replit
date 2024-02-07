@@ -108,6 +108,7 @@ def input_checker():
 if __name__ == "__test_input__":
     input_checker()
 '''
+This is for checking the export. 
 for i in db[dict_name][ni].items():
   print(i)
 '''
