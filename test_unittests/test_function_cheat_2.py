@@ -1,11 +1,14 @@
 import unittest
 from responses import get_response 
 from cheat import moves
+from add_mon import add_mon
+from del_mon import del_mon
+from export_mon import export_mon
 
 class TestStringMethods(unittest.TestCase):
 
     def test_list_mons(self):
-      self.assertEqual(moves("Quick Claw"),"00B7")
+      self.assertEqual(")
   
 '''
     def test_get_response(self):
