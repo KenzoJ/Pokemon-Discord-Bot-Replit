@@ -13,4 +13,5 @@ def get_response(user_input):
     response = " ".join(response[1:])
     code = moves(response)
     return code
-
+  else:
+    return "no valid input"
