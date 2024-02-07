@@ -16,9 +16,10 @@ def export_mon():
   while True:
     poke = input("\nWhat pokemon do you need? (Enter nickname) \n")
     if poke in temp_poke:
-      calc_mon(na, poke)
+      for x in calc_mon(na, poke):
+        print(x)
       break
-      
+    
 def calc_mon(na, poke):
   #Printing the calc format
   x = []
@@ -47,12 +48,14 @@ def calc_mon(na, poke):
   test_vari.append(f'IVs: {y[0]} HP / {y[1]} Atk / {y[2]} Def / {y[3]} SpA / {y[4]} SpD / {y[5]} Spe')
   for i in db[na][poke]["all_moves"]:
     test_vari.append(f"-{i}")
-  for x in test_vari:
-    print(x)
-
+  print(test_vari)
+  return test_vari
+  
 if __name__ == "__main__":
   export_mon()
 
 '''
 Adding the functionality of 3 ways it's trained
+for x in test_vari:
+  print(x)
 '''
