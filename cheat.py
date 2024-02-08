@@ -214,6 +214,9 @@ cheat_database = {
 }
 
 def moves(response):
-  response = response.title()
-  if response in cheat_database:
-    return cheat_database[response]
+    response = response.title()
+    if response in cheat_database:
+      return cheat_database[response]
+    else:
+      return "no valid cheat"
+    
