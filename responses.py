@@ -2,6 +2,7 @@ from replit import db
 from cheat import moves
 from poke_tracker.add_pokemon import add_mon
 from poke_tracker.export_pokemon import export_mon
+from test_multiple import test_multiple
 import sys
 
 def get_response(user_input):
@@ -17,16 +18,8 @@ def get_response(user_input):
     add_mon()
   if response == "export":
     export_mon()
-            
+  if response == "test":
+    x = test_multiple(response)
+    return x
   else:
     return "no valid input"
-'''
-from test_input import input_checker
-from test_dict import calc_export
-from replit import db
-import sys
-
-def main():
-
-      
-   '''
