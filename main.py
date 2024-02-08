@@ -3,17 +3,30 @@ from discord import Intents, Client, Message
 from replit import db
 from responses import get_response
 
+import enum
+from re import A
+import typing
+import settings
+import discord 
+from discord.ext import commands
+from discord import app_commands
+
 #Discord Intent rules
-intents: Intents = Intents.default()
-intents.message_content = True #NOQA
-client: Client = Client(intents=intents)
+intents = discord.Intents.all()
+bot = commands.Bot(command_prefix="!",intents=intents)
 
 #gives an intro message confirming it's on
-@client.event
+@bot.event
 async def on_ready():
+  bot.tree.copy_global_to(guild=settings.GUILDS_ID)
+  await bot.tree.sync(guild=settings.GUILDS_ID)
   print('you in')
 
-# prevents duplicate loops
+bot.run(os.environ['SECRET_BOT_KEY'])
+
+GUILDS_ID = discord.Object(id=int(os.environ("GUILD")))
+'''
+older code:
 @client.event
 async def on_message(message):
   try:
@@ -24,4 +37,5 @@ async def on_message(message):
     print("Error")
 
 
-client.run(os.environ['SECRET_BOT_KEY'])
+
+'''
