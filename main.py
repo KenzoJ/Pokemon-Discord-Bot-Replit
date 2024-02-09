@@ -22,12 +22,18 @@ def main():
       print(f"Synced {len(synced)} command(s)")
     except Exception as e:
       print(e)
-      
+
+  @bot.tree.command()
+  async def test_export_mon(interaction: discord.Interaction, person: typing.Literal["CJ",'Doug','Sam']):
+    await interaction.response.send_message(f"which mons? {db[person].keys()}")
+    await response.send_message(f"Okay {choice}")
+  
   @bot.tree.command()
   @app_commands.describe(text_to_send="Simon Says this...")
+  #^This gives text above as you are inputting data 
   @app_commands.rename(text_to_send="message")
   async def test_command(interaction: discord.Interaction, text_to_send : str):
-    await interaction.response.send_message(f"{text_to_send}", ephermeral=True)
+    await interaction.response.send_message(f"{text_to_send}")
   
   @bot.tree.command(name="say")
   @app_commands.describe(thing_to_say = "what should i say?")
@@ -38,9 +44,7 @@ def main():
   async def drink(interaction: discord.Interaction, choice: typing.Literal['beer','milk', 'tea']):
     await interaction.response.send_message(f"{choice}")
 
-  @bot.tree.command()
-  async def test_export_mon(interaction: discord.Interaction, choice: typing.Literal["CJ",'Doug','Sam']):
-    await interaction.response.send_message(f"which mons? {db[na].keys()}")
+
 
   bot.run(os.environ['SECRET_BOT_KEY'])
   

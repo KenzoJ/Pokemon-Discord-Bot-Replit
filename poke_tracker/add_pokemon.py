@@ -29,10 +29,11 @@ def add_mon():
   }
 #Making first database based off of three names.
   while True:
-    print(db["CJ"]["Magi"].items())
     dict_name = input("For CJ, Doug, or Sam?")
     if dict_name == "CJ" or dict_name == "Doug" or dict_name == "Sam":
       break
+    else:
+      
 
   ni = input("Nickname?")
   while True:
@@ -88,23 +89,25 @@ def add_mon():
     add_ivs = input("IVs?")
     add_ivs = add_ivs.split()
     if len(add_ivs) == 6:
+      print(add_ivs)
       for i in add_ivs:
         if i in iv_dict:
           i = iv_dict[i]
           temp_iv.append(i)
   #dictionary adder
-  db[dict_name] = {ni: {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
+  new_mon = {ni: {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
   }
-  db[dict_name][ni]["all_moves"] = temp_moves
-  db[dict_name][ni]["poke"] = poke_lvl[0]
-  db[dict_name][ni]["lv"] = poke_lvl[1]
-  db[dict_name][ni]["ntr"] = add_nat
-  db[dict_name][ni]["stats"] = temp_stats
-  db[dict_name][ni]["abil"] = get_ability
-  db[dict_name][ni]["ivs"] = temp_iv
+  new_mon[ni]["all_moves"] = temp_moves
+  new_mon[ni]["poke"] = poke_lvl[0]
+  new_mon[ni]["lv"] = poke_lvl[1]
+  new_mon[ni]["ntr"] = add_nat
+  new_mon[ni]["stats"] = temp_stats
+  new_mon[ni]["abil"] = get_ability
+  new_mon[ni]["ivs"] = temp_iv
+  db[dict_name] = new_mon
+  db[dict_name].
   print("Successfully added!")
-
-  sys.exit()
+  
 
 
 
