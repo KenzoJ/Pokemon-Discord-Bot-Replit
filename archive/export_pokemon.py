@@ -1,38 +1,29 @@
-import requests
+#This asks who is looking for the pokemon, then the pokemon name, then the 
 from replit import db
-import sys
+import json
+
+
+def main():
+  x = input("add mon? calc? del mon?")
+  while True: 
+    if x == "add mon":
+      add_mon()
+      break
+    if x == "calc":
+      calc()
+      break
+    if x == "del mon":
+      del_mon()
+      break
+
 
 def add_mon():
-  #dictionaries for reference
-  dict = {}
-  all_natures = [
-    "Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid",
-  ]
-  stats = ["Atk", "HP","Def","SpA","SpD","Spe"]
-  iv_dict = {
-    "s"	:	"30"	,
-    "a+"	:	"28"	,
-    "a"	:	"26"	,
-    "a-"	:	"24"	,
-    "b+"	:	"22"	,
-    "b"	:	"20"	,
-    "b-"	:	"18"	,
-    "c+"	:	"16"	,
-    "c"	:	"14"	,
-    "c-"	:	"12"	,
-    "d+"	:	"10"	,
-    "d"	:	"8"	,
-    "d-"	:	"6"	,
-    "e+"	:	"4"	,
-    "e"	:	"2"	,
-    "e-"	:	"0"	
-  }
-#Making first database based off of three names.
   while True:
-    print(db["CJ"]["Magi"].items())
     dict_name = input("For CJ, Doug, or Sam?")
     if dict_name == "CJ" or dict_name == "Doug" or dict_name == "Sam":
       break
+    else:
+
 
   ni = input("Nickname?")
   while True:
@@ -88,31 +79,30 @@ def add_mon():
     add_ivs = input("IVs?")
     add_ivs = add_ivs.split()
     if len(add_ivs) == 6:
+      print(add_ivs)
       for i in add_ivs:
         if i in iv_dict:
           i = iv_dict[i]
           temp_iv.append(i)
   #dictionary adder
-  db[dict_name] = {ni: {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
+  new_mon = {ni: {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
   }
-  db[dict_name][ni]["all_moves"] = temp_moves
-  db[dict_name][ni]["poke"] = poke_lvl[0]
-  db[dict_name][ni]["lv"] = poke_lvl[1]
-  db[dict_name][ni]["ntr"] = add_nat
-  db[dict_name][ni]["stats"] = temp_stats
-  db[dict_name][ni]["abil"] = get_ability
-  db[dict_name][ni]["ivs"] = temp_iv
+  new_mon[ni]["all_moves"] = temp_moves
+  new_mon[ni]["poke"] = poke_lvl[0]
+  new_mon[ni]["lv"] = poke_lvl[1]
+  new_mon[ni]["ntr"] = add_nat
+  new_mon[ni]["stats"] = temp_stats
+  new_mon[ni]["abil"] = get_ability
+  new_mon[ni]["ivs"] = temp_iv
+  db[dict_name] = new_mon
+  db[dict_name].
   print("Successfully added!")
 
-  sys.exit()
-
-
-
 if __name__ == "__main__":
-    add_mon()
-'''
-This is for checking the export. 
+  export_mon()
 
-for i in db[dict_name][ni].items():
-  print(i)
+'''
+Adding the functionality of 3 ways it's trained
+for x in test_vari:
+  print(x)
 '''
