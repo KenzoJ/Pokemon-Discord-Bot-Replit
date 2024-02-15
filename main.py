@@ -9,8 +9,6 @@ import discord
 import json
 from discord.ext import commands
 
-ex_dict = {"CJ": "magi", "Sam": "clafairy"}
-
 def main():
   #Discord Intent rules
   intents = discord.Intents.all()
@@ -28,11 +26,11 @@ def main():
 
 #exporting a mons
   @bot.tree.command()
-  async def test_export_mon(interaction: discord.Interaction, person: typing.Literal["CJ",'Doug','Sam']):
+  @app_commands.describe(mon=f"Choose a mons.. {db.keys()}")
+  async def test_export_mon(interaction: discord.Interaction, mon : str):
     #await interaction.response.send_message
     await interaction.response.defer(ephemeral = False)
     await asyncio.sleep(5)
-    mon = "CJ_Magi4"
     lst = []
     lst = export_mon(mon)
     await interaction.followup.send(f"\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n{lst[6]}\n{lst[7]}\n{lst[8]}\n{lst[9]}\n")
@@ -52,35 +50,28 @@ def main():
 #test of telling what the discord bot to say  
   @bot.tree.command(name="say")
   @app_commands.describe(thing_to_say = "what should i say?")
-  async def say(interaction: discord.Interaction, thing_to_say: str):
+  async def say(interaction: discord.Interaction, thing_to_say: str, person: typing.Literal["CJ",'Doug','Sam']):
     await interaction.response.send_message(f"{interaction.user.name} said {thing_to_say}")
 
   @bot.tree.command()
-  async def drink(interaction: discord.Interaction, choice: typing.Literal['beer','milk', 'tea']):
-    await interaction.response.send_message(f"{choice}")
-
+  @app_commands.describe(moves = "tackle, tackle, tackle, tackle", evs = "ex. HP Def", iv = 'a a a b b b')
+  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: str, evs: str, ability: str, iv: str, moves: str):
+    moves = moves.split()
+    await interaction.response.send_message(f"successfully added {poke} by {person}, called {nick} at level {lvl} with nature {nature} and ivs {iv} and evs of {evs} with {moves}")
   bot.run(os.environ['SECRET_BOT_KEY'])
+'''
+    dict_name = person + _ + nick
+    db[dict_name]["all_moves"] = moves
+    db[dict_name]["poke"] = poke
+    db[dict_name]["lv"] = lvl
+    db[dict_name]["ntr"] = nature
+    db[dict_name]["stats"] = evs
+    db[dict_name]["abil"] = ability
+    db[dict_name]["ivs"] = iv
+'''
+
   
 def add_mon():
-  dict_name = person
-  #nickname
-  ni = "Magi2"
-  #level
-  lvl = "50"
-  #poke
-  poke = "Magikarp"
-  #Nature
-  nature = "Bold"
-  #EV training
-  evs = ["HP", "Spe"]
-  #Ability checker
-  ability = "Bold"
-  #moves
-  moves = ["Tackle","Tackle","Tackle","Tackle"]
-
-  #IV Input
-  iv = ["3","4","2","1","5","7"]
-
   db[dict_name] = {ni: {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
   }
   db[dict_name][ni]["all_moves"] = moves
@@ -91,9 +82,6 @@ def add_mon():
   db[dict_name][ni]["abil"] = ability
   db[dict_name][ni]["ivs"] = iv
   print("Successfully added!")
- 
-
-
       
 def export_mon(person):
   dict_name = person
