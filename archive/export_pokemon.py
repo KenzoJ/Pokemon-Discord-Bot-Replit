@@ -1,39 +1,29 @@
-import requests
+#This asks who is looking for the pokemon, then the pokemon name, then the 
 from replit import db
-import sys
+import json
+
+
+def main():
+  x = input("add mon? calc? del mon?")
+  while True: 
+    if x == "add mon":
+      add_mon()
+      break
+    if x == "calc":
+      calc()
+      break
+    if x == "del mon":
+      del_mon()
+      break
+
 
 def add_mon():
-  #dictionaries for reference
-  dict = {}
-  all_natures = [
-    "Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid",
-  ]
-  stats = ["Atk", "HP","Def","SpA","SpD","Spe"]
-  iv_dict = {
-    "s"	:	"30"	,
-    "a+"	:	"28"	,
-    "a"	:	"26"	,
-    "a-"	:	"24"	,
-    "b+"	:	"22"	,
-    "b"	:	"20"	,
-    "b-"	:	"18"	,
-    "c+"	:	"16"	,
-    "c"	:	"14"	,
-    "c-"	:	"12"	,
-    "d+"	:	"10"	,
-    "d"	:	"8"	,
-    "d-"	:	"6"	,
-    "e+"	:	"4"	,
-    "e"	:	"2"	,
-    "e-"	:	"0"	
-  }
-#Making first database based off of three names.
   while True:
     dict_name = input("For CJ, Doug, or Sam?")
     if dict_name == "CJ" or dict_name == "Doug" or dict_name == "Sam":
       break
     else:
-      
+
 
   ni = input("Nickname?")
   while True:
@@ -107,15 +97,12 @@ def add_mon():
   db[dict_name] = new_mon
   db[dict_name].
   print("Successfully added!")
-  
-
-
 
 if __name__ == "__main__":
-    add_mon()
-'''
-This is for checking the export. 
+  export_mon()
 
-for i in db[dict_name][ni].items():
-  print(i)
+'''
+Adding the functionality of 3 ways it's trained
+for x in test_vari:
+  print(x)
 '''

@@ -1,0 +1,15 @@
+
+
+Start
+Magi2
+Magikarp
+Level: 50
+Bold Nature
+Ability: Bold
+EVs: HP / Spe
+IVs: 3 HP / 4 Atk / 2 Def/ 1 SpA / 5 SpD / 7 Spe
+- Tackle
+- Tackle
+- Tackle
+- Tackle
+End
