@@ -57,10 +57,11 @@ def main():
   @app_commands.describe(moves = "tackle, tackle, tackle, tackle", evs = "ex. HP Def", iv = 'a a a b b b')
   async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: str, evs: str, ability: str, iv: str, moves: str):
     moves = moves.split()
-    await interaction.response.send_message(f"successfully added {poke} by {person}, called {nick} at level {lvl} with nature {nature} and ivs {iv} and evs of {evs} with {moves}")
-  bot.run(os.environ['SECRET_BOT_KEY'])
-'''
-    dict_name = person + _ + nick
+    iv = iv.split()
+    evs = evs.split()
+    nick = nick.lower()
+    dict_name = person + '_' + nick
+    db[dict_name] = {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
     db[dict_name]["all_moves"] = moves
     db[dict_name]["poke"] = poke
     db[dict_name]["lv"] = lvl
@@ -68,7 +69,9 @@ def main():
     db[dict_name]["stats"] = evs
     db[dict_name]["abil"] = ability
     db[dict_name]["ivs"] = iv
-'''
+    await interaction.response.send_message(f"successfully added {poke} {lvl} by {person}, called {nick} with nature of {nature}  \nivs {iv} \nevs of {evs} \n {moves}")
+  bot.run(os.environ['SECRET_BOT_KEY'])
+
 
   
 def add_mon():
