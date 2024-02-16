@@ -3,8 +3,6 @@
 Purpose of this bot is for people who do pokemon runs in Unbound who want to track their many runs a bit more effeciently. This works best with a soul link run with multiple people and allows all members to use the bot. 
 
 ### Current Feature Pushes
-- Cleaning Up the adding pokemon feature to prevent errors in database
-- Asking for cheat codes
 - Adding the ability to delete stored pokemon
 - 
 
@@ -36,3 +34,6 @@ Major events: Asking the bot what major battle is up ahead and providing any lin
 - Type calculator: Choosing a pokemon and out comes all their resistances and weaknesses. ex. Charizard: Weak to WAT, ELE, ROC x4
 - Team Weakness: user adds their team and bot finds out what their team 
 
+### Recent changelog:
+- 02/16 Clean Up the adding pokemon feature to prevent errors in database
+- 02/16 Now you can ask for either the item or the move based on the slash command 

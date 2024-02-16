@@ -8,32 +8,12 @@ import typing
 import discord 
 import json
 from discord.ext import commands
-from cheat import cheat_database
-
-stats = ["Atk", "HP","Def","SpA","SpD","Spe"]
-iv_dict = {  "s"	:	"30"	,
-  "a+"	:	"28"	,
-  "a"	:	"26"	,
-  "a-"	:	"24"	,
-  "b+"	:	"22"	,
-  "b"	:	"20"	,
-  "b-"	:	"18"	,
-  "c+"	:	"16"	,
-  "c"	:	"14"	,
-  "c-"	:	"12"	,
-  "d+"	:	"10"	,
-  "d"	:	"8"	,
-  "d-"	:	"6"	,
-  "e+"	:	"4"	,
-  "e"	:	"2"	,
-  "e-"	:	"0"	
-}
+from references import cheat_database, stats, iv_dict, move_database
 
 def main():
-  #Discord Intent rules
+#Discord Intent rules
   intents = discord.Intents.all()
   bot = commands.Bot(command_prefix="!",intents=intents)
-  
 
 #gives an intro message confirming it's on
   @bot.event
@@ -42,7 +22,6 @@ def main():
     synced = await bot.tree.sync()
     print(f"Synced {len(synced)} command(s)")
     
-
 #exporting a mons
   @bot.tree.command()
   @app_commands.describe(mon="Choose a mons.. (ask for /list mons if you need one)")
@@ -51,7 +30,6 @@ def main():
     await interaction.response.defer(ephemeral = False)
     await asyncio.sleep(5)
     lst = []
-  
     dict_name = mon
     x = []
     y = []
@@ -75,30 +53,34 @@ def main():
   @bot.tree.command()
   async def list_mons(interaction: discord.Interaction):
     await interaction.response.send_message(f"All the keys: \n{db.keys()}",ephemeral = True)
+
     
-  @bot.tree.command()
-  @app_commands.describe(text_to_send="Simon Says this...")
-  #^This gives text above as you are inputting data 
-  @app_commands.rename(text_to_send="message")
-  async def test_command(interaction: discord.Interaction, text_to_send : str):
-    await interaction.response.send_message(f"{text_to_send}")
-    
-#test of telling what the discord bot to say  
-  @bot.tree.command(name="code")
+# Cheat code bot
+  @bot.tree.command(name="item_cheat")
   @app_commands.describe(code = "what code?")
-  async def cheat(interaction: discord.Interaction, code: str):
+  async def item_cheat(interaction: discord.Interaction, code: str):
+    code = code.title()
     if code in cheat_database: 
       new_code = cheat_database[code]
-      
+      new_code = "82024022 " + new_code
     else:
       new_code = "no valid item/hm"
-    await interaction.response.send_message(f"82024022 {new_code}")
-
+    await interaction.response.send_message(f"\n{code}:\n{new_code}")
+#Move checker
+  @bot.tree.command()
+  @app_commands.describe(move = "what move?")
+  async def moves(interaction: discord.Interaction, move: str):
+    move = move.title()
+    if move in move_database: 
+      new_move = move_database[move]
+    else:
+      new_move = "no valid move name"
+    await interaction.response.send_message(f"\n{move}:\n{new_move}")
 #Adding a mon using discord 
 #No checks yet 
   @bot.tree.command()
   @app_commands.describe(moves = "tackle, tackle, tackle, tackle", evs = "HP Atk Def SpA SpD Spe", iv = 'a a a b b b')
-  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: str, evs: str, ability: str, iv: str, moves: str):
+  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], evs: str, ability: str, iv: str, moves: str):
     moves = moves.title().split(', ')
     temp_iv = iv.split()
     ivs = []
