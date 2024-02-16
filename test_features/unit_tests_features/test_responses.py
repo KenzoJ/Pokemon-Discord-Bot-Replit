@@ -1,5 +1,4 @@
-#this is a basic test to see if help gives you
-#actual help. And if there's no valid input.
+#unit test does not work
 
 import unittest
 from responses import get_response 

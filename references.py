@@ -1,3 +1,26 @@
+dict = {}
+all_natures = [
+  "Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid",
+]
+stats = ["Atk", "HP","Def","SpA","SpD","Spe"]
+iv_dict = {
+  "s"	:	"30"	,
+  "a+"	:	"28"	,
+  "a"	:	"26"	,
+  "a-"	:	"24"	,
+  "b+"	:	"22"	,
+  "b"	:	"20"	,
+  "b-"	:	"18"	,
+  "c+"	:	"16"	,
+  "c"	:	"14"	,
+  "c-"	:	"12"	,
+  "d+"	:	"10"	,
+  "d"	:	"8"	,
+  "d-"	:	"6"	,
+  "e+"	:	"4"	,
+  "e"	:	"2"	,
+  "e-"	:	"0"	
+}
 cheat_database = {
    "Safari Ball"	:	"0005"	,
    "Net Ball"	:	"0006"	,
@@ -212,11 +235,3 @@ cheat_database = {
    "HM07"	:	"0159"	,
    "HM08"	:	"015A"	,
 }
-
-def moves(response):
-    response = response.title()
-    if response in cheat_database:
-      return cheat_database[response]
-    else:
-      return "no valid cheat"
-    
