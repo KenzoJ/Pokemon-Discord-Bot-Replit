@@ -3,8 +3,11 @@
 Purpose of this bot is for people who do pokemon runs in Unbound who want to track their many runs a bit more effeciently. This works best with a soul link run with multiple people and allows all members to use the bot. 
 
 ### Current Feature Pushes
-- Adding the ability to delete stored pokemon
-- 
+- Improving speed of adding pokemon: drop down for IVs
+- Picture for upcoming major fight
+- List of battle items, then gives specific battle item description
+- Learnable moves from a pokemon
+- - Adding the ability to delete stored pokemon (using buttons)
 
 
 A few initial ideas are below. I am open to any feedback or changes.
