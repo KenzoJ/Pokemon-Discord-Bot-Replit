@@ -80,7 +80,7 @@ def main():
 #No checks yet 
   @bot.tree.command()
   @app_commands.describe(moves = "tackle, tackle, tackle, tackle", evs = "HP Atk Def SpA SpD Spe", iv = 'a a a b b b')
-  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], evs: str, ability: str, iv: str, moves: str):
+  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], evs: str, ability: str, iv: str, test_ivs: ["s","a+","a","a-","b"], moves: str):
     moves = moves.title().split(', ')
     temp_iv = iv.split()
     ivs = []
