@@ -8,7 +8,7 @@ Purpose of this bot is for people who do pokemon runs in Unbound who want to tra
 - List of battle items, then gives specific battle item description
 - Learnable moves from a pokemon
 - - Adding the ability to delete stored pokemon (using buttons)
-
+- cleaning code: adding cogs, adding logging
 
 A few initial ideas are below. I am open to any feedback or changes.
 
