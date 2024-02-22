@@ -6,9 +6,16 @@ import asyncio
 import discord
 from discord.ui import Button, View
 from discord.ext import commands
-from references import cheat_database, stats, iv_dict, move_database, battle_items
+from references import cheat_database, stats, iv_dict, move_database, battle_des, all_battle_items, all_battle_items_2
 from test_classes import export_mon
-  
+import math
+
+
+
+# 1. Give list of all battle items
+# 2. Group slash commands ( https://guide.pycord.dev/interactions/application-commands/slash-commands)
+# 3. Upgrading the options with this tut: (https://www.youtube.com/watch?v=xCkTI8bu0UU)
+
 def main():
 #Discord Intent rules
   intents = discord.Intents.all()
@@ -67,17 +74,15 @@ def main():
   #checking if better wy of adding ivs
   @bot.tree.command()
   @app_commands.describe(moves = "tackle, tackle, tackle, tackle", ev1 = "Currently only accepts two total. You'll have to adjust anything more than 3", iv = 'a a a b b b')
-  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], ev1: typing.Literal["Atk", "HP","Def","SpA","SpD","Spe"], ev2: typing.Literal["Atk", "HP","Def","SpA","SpD","Spe"], ability: str, iv: str, test_ivs: str, moves: str):
+  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], ev1: typing.Literal["Atk", "HP","Def","SpA","SpD","Spe"], ev2: typing.Literal["Atk", "HP","Def","SpA","SpD","Spe"], ability: str, iv: str, moves: str):
     moves = moves.title().split(', ')
     temp_iv = iv.split()
     ivs = []
-    evs = []
+    evs = [ev1, ev2]
     for i in temp_iv:
       if i in iv_dict:
         add = iv_dict[i]
         ivs.append(add)
-    evs = evs.append(ev1)
-    evs = evs.append(ev2)
     nick = nick.lower()
     dict_name = person + '_' + nick
     db[dict_name] = {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
@@ -91,7 +96,7 @@ def main():
   #sends just what you added
     await interaction.response.defer(ephemeral = False)
     await asyncio.sleep(5)
-    lst = export_mon(need_mon)
+    lst = export_mon(dict_name)
     await interaction.followup.send(f"`\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n- {lst[6]}\n- {lst[7]}\n- {lst[8]}\n- {lst[9]}\n`")
 
   #7: Battle items
@@ -99,12 +104,34 @@ def main():
   @app_commands.describe(item = "what item?")
   async def battle_item_checker(interaction: discord.Interaction, item: str):
     item = item.title()
-    if item in battle_items: 
-      new_item = battle_items[item]
+    if item in battle_des: 
+      new_item = battle_des[item]
     else:
       new_item = "no valid move name"
     await interaction.response.send_message(f"\n{item}:{new_item}")
 
+
+#testing exporting all 
+  @bot.tree.command(description = "export all battle items")
+  @app_commands.describe(part = "either: 1 or 2")
+  async def all_items(interaction: discord.Interaction, part: str):
+    temp_list = []
+    index = 0
+    limit = 100
+    if part == "1":
+      index = 0
+      limit = 100
+      for index, element in zip(range(limit), all_battle_items):
+        temp_list.append(all_battle_items[index])
+    elif part == "2":
+      index = 100
+      limit = 100
+      for index, element in zip(range(limit), all_battle_items_2):
+        temp_list.append(all_battle_items_2[index])
+    else:
+      temp_list.append('Number invalid')
+    
+    await interaction.response.send_message('\n'.join(temp_list),ephemeral = True)
   
   bot.run(os.environ['SECRET_BOT_KEY'])
 
