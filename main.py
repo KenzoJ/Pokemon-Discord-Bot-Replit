@@ -1,14 +1,15 @@
-import os
+#import os
+import typing
+#import json
 from discord import Intents, Client, Message, app_commands
 from replit import db
 import asyncio
-import enum
-from re import A
-import typing
-import discord 
-import json
+import discord
+from discord.ui import Button, View
+#from re import A
 from discord.ext import commands
 from references import cheat_database, stats, iv_dict, move_database
+from test_classes import export_mon
 
 def main():
 #Discord Intent rules
@@ -23,30 +24,12 @@ def main():
     print(f"Synced {len(synced)} command(s)")
     
 #exporting a mons
-  @bot.tree.command()
-  @app_commands.describe(mon="Choose a mons.. (ask for /list mons if you need one)")
-  async def export_mon(interaction: discord.Interaction, mon: str):
-    #await interaction.response.send_message
+  @bot.tree.command(name="export_mons")
+  @app_commands.describe(need_mon="Choose a mons.. (ask for /list mons if you need one)")
+  async def calc_export(interaction: discord.Interaction, need_mon: str):
     await interaction.response.defer(ephemeral = False)
     await asyncio.sleep(5)
-    lst = []
-    dict_name = mon
-    x = []
-    y = []
-    x = json.loads(db.get_raw(dict_name)).get("stats")[0:]
-    y = json.loads(db.get_raw(dict_name)).get("ivs")
-    test_vari = []
-    test_vari.append(db[dict_name]["poke"])
-    level = f'Level: {db[dict_name]["lv"]}'
-    test_vari.append(level)
-    test_vari.append(f'{db[dict_name]["ntr"]} Nature')
-    test_vari.append(f'Ability: {db[dict_name]["abil"]}')
-    test_vari.append(f'EVs: 252 {x[0]} / 252 {x[1]}')
-    test_vari.append(f'IVs: {y[0]} HP / {y[1]} Atk / {y[2]} Def / {y[3]} SpA / {y[4]} SpD / {y[5]} Spe')
-    for i in db[dict_name]["all_moves"]:
-      test_vari.append(f"{i}")
-    
-    lst = test_vari
+    lst = export_mon(need_mon)
     await interaction.followup.send(f"`\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n- {lst[6]}\n- {lst[7]}\n- {lst[8]}\n- {lst[9]}\n`")
 
 #gives you a list of all the mons in the DB
@@ -54,7 +37,6 @@ def main():
   async def list_mons(interaction: discord.Interaction):
     await interaction.response.send_message(f"All the keys: \n{db.keys()}",ephemeral = True)
 
-    
 # Cheat code bot
   @bot.tree.command(name="item_cheat")
   @app_commands.describe(code = "what code?")
@@ -66,6 +48,7 @@ def main():
     else:
       new_code = "no valid item/hm"
     await interaction.response.send_message(f"\n{code}:\n{new_code}")
+    
 #Move checker
   @bot.tree.command()
   @app_commands.describe(move = "what move?")
@@ -76,19 +59,23 @@ def main():
     else:
       new_move = "no valid move name"
     await interaction.response.send_message(f"\n{move}:\n{new_move}")
+
 #Adding a mon using discord 
 #No checks yet 
+  #checking if better wy of adding ivs
   @bot.tree.command()
-  @app_commands.describe(moves = "tackle, tackle, tackle, tackle", evs = "HP Atk Def SpA SpD Spe", iv = 'a a a b b b')
-  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], evs: str, ability: str, iv: str, moves: str):
+  @app_commands.describe(moves = "tackle, tackle, tackle, tackle", ev1 = "Currently only accepts two total. You'll have to adjust anything more than 3", iv = 'a a a b b b')
+  async def add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'], poke: str, nick: str, lvl: str, nature: typing.Literal["Bashful", "Docile", "Hardy", "Quirky", "Serious", "Adamant", "Brave", "Lonely", "Naughty", "Bold", "Impish", "Lax", "Relaxed", "Modest", "Mild", "Quiet", "Rash", "Calm","Careful", "Gentle", "Sassy", "Hasty", "Jolly", "Naive", "Timid"], ev1: typing.Literal["Atk", "HP","Def","SpA","SpD","Spe"], ev2: typing.Literal["Atk", "HP","Def","SpA","SpD","Spe"], ability: str, iv: str, test_ivs: str, moves: str):
     moves = moves.title().split(', ')
     temp_iv = iv.split()
     ivs = []
+    evs = []
     for i in temp_iv:
       if i in iv_dict:
         add = iv_dict[i]
         ivs.append(add)
-    evs = evs.split()
+    evs = evs.append(ev1)
+    evs = evs.append(ev2)
     nick = nick.lower()
     dict_name = person + '_' + nick
     db[dict_name] = {"all_moves": 0, "poke": 0, "name": 0, "lv": 0, "ntr": 0, "stats": 0, "abil": 0, "ivs": 0}
@@ -99,45 +86,20 @@ def main():
     db[dict_name]["stats"] = evs
     db[dict_name]["abil"] = ability
     db[dict_name]["ivs"] = ivs
+  #sends just what you added
     await interaction.response.defer(ephemeral = False)
     await asyncio.sleep(5)
-    lst = [] 
-    x = []
-    y = []
-    x = json.loads(db.get_raw(dict_name)).get("stats")[0:]
-    y = json.loads(db.get_raw(dict_name)).get("ivs")
-    test_vari = []
-    test_vari.append(db[dict_name]["poke"])
-    level = f'Level: {db[dict_name]["lv"]}'
-    test_vari.append(level)
-    test_vari.append(f'{db[dict_name]["ntr"]} Nature')
-    test_vari.append(f'Ability: {db[dict_name]["abil"]}')
-    test_vari.append(f'EVs: 252 {x[0]} / 252 {x[1]}')
-    test_vari.append(f'IVs: {y[0]} HP / {y[1]} Atk / {y[2]} Def / {y[3]} SpA / {y[4]} SpD / {y[5]} Spe')
-    for i in db[dict_name]["all_moves"]:
-      test_vari.append(f"{i}")
-
-    lst = test_vari
+    lst = export_mon(need_mon)
     await interaction.followup.send(f"`\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n- {lst[6]}\n- {lst[7]}\n- {lst[8]}\n- {lst[9]}\n`")
-  bot.run(os.environ['SECRET_BOT_KEY'])
+    
+#Deleting pokemon 
+  #WORK IN PROGRESS
+  @bot.tree.command(name="delete_mon")
+  async def delete(interaction: discord.Interaction, code: str):
+    button = Button(label="Delete?", url="https://google.com")
+    view = View()
+    view.add_item(button)
+    await ctx.send("Hi!", view=view)
 
-  
-def export_mon(person):
-  dict_name = person
-  x = []
-  y = []
-  x = json.loads(db.get_raw(dict_name)).get("stats")[0:]
-  y = json.loads(db.get_raw(dict_name)).get("ivs")
-  test_vari = []
-  test_vari.append(db[dict_name]["poke"])
-  level = f'Level: {db[dict_name]["lv"]}'
-  test_vari.append(level)
-  test_vari.append(f'{db[dict_name]["ntr"]} Nature')
-  test_vari.append(f'Ability: {db[dict_name]["abil"]}')
-  test_vari.append(f'EVs: 252 {x[0]} / 252 {x[1]}')
-  test_vari.append(f'IVs: {y[0]} HP / {y[1]} Atk / {y[2]} Def / {y[3]} SpA / {y[4]} SpD / {y[5]} Spe')
-  for i in db[dict_name]["all_moves"]:
-    test_vari.append(f"-{i}")
-  return test_vari
 
 main()
