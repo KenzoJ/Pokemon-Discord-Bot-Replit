@@ -1,43 +1,45 @@
-#import os
+import os
 import typing
-#import json
 from discord import Intents, Client, Message, app_commands
 from replit import db
 import asyncio
 import discord
 from discord.ui import Button, View
-#from re import A
 from discord.ext import commands
-from references import cheat_database, stats, iv_dict, move_database
+from references import cheat_database, stats, iv_dict, move_database, battle_items
 from test_classes import export_mon
-
+  
 def main():
 #Discord Intent rules
   intents = discord.Intents.all()
   bot = commands.Bot(command_prefix="!",intents=intents)
 
-#gives an intro message confirming it's on
+#1: gives an intro message confirming it's on
   @bot.event
   async def on_ready():
     print('you in')
     synced = await bot.tree.sync()
     print(f"Synced {len(synced)} command(s)")
     
-#exporting a mons
+#2: exporting a mons
   @bot.tree.command(name="export_mons")
   @app_commands.describe(need_mon="Choose a mons.. (ask for /list mons if you need one)")
   async def calc_export(interaction: discord.Interaction, need_mon: str):
     await interaction.response.defer(ephemeral = False)
     await asyncio.sleep(5)
-    lst = export_mon(need_mon)
-    await interaction.followup.send(f"`\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n- {lst[6]}\n- {lst[7]}\n- {lst[8]}\n- {lst[9]}\n`")
+    if need_mon in db.keys():
+      lst = export_mon(need_mon)
+      await interaction.followup.send(f"`\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n- {lst[6]}\n- {lst[7]}\n- {lst[8]}\n- {lst[9]}\n`")
+    else:
+      await interaction.followup.send("No valid mon")
+  
 
-#gives you a list of all the mons in the DB
+#3: gives you a list of all the mons in the DB
   @bot.tree.command()
   async def list_mons(interaction: discord.Interaction):
     await interaction.response.send_message(f"All the keys: \n{db.keys()}",ephemeral = True)
 
-# Cheat code bot
+# 4: Cheat code bot
   @bot.tree.command(name="item_cheat")
   @app_commands.describe(code = "what code?")
   async def item_cheat(interaction: discord.Interaction, code: str):
@@ -49,7 +51,7 @@ def main():
       new_code = "no valid item/hm"
     await interaction.response.send_message(f"\n{code}:\n{new_code}")
     
-#Move checker
+#5: Move checker
   @bot.tree.command()
   @app_commands.describe(move = "what move?")
   async def moves(interaction: discord.Interaction, move: str):
@@ -60,7 +62,7 @@ def main():
       new_move = "no valid move name"
     await interaction.response.send_message(f"\n{move}:\n{new_move}")
 
-#Adding a mon using discord 
+#6: Adding a mon using discord 
 #No checks yet 
   #checking if better wy of adding ivs
   @bot.tree.command()
@@ -91,15 +93,19 @@ def main():
     await asyncio.sleep(5)
     lst = export_mon(need_mon)
     await interaction.followup.send(f"`\n{lst[0]}\n{lst[1]}\n{lst[2]}\n{lst[3]}\n{lst[4]}\n{lst[5]}\n- {lst[6]}\n- {lst[7]}\n- {lst[8]}\n- {lst[9]}\n`")
-    
-#Deleting pokemon 
-  #WORK IN PROGRESS
-  @bot.tree.command(name="delete_mon")
-  async def delete(interaction: discord.Interaction, code: str):
-    button = Button(label="Delete?", url="https://google.com")
-    view = View()
-    view.add_item(button)
-    await ctx.send("Hi!", view=view)
 
+  #7: Battle items
+  @bot.tree.command()
+  @app_commands.describe(item = "what item?")
+  async def battle_item_checker(interaction: discord.Interaction, item: str):
+    item = item.title()
+    if item in battle_items: 
+      new_item = battle_items[item]
+    else:
+      new_item = "no valid move name"
+    await interaction.response.send_message(f"\n{item}:{new_item}")
+
+  
+  bot.run(os.environ['SECRET_BOT_KEY'])
 
 main()
