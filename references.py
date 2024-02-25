@@ -970,208 +970,606 @@ move_database = {"Absorb"	:	"82024022 0047"	,
 
 
 
-battle_items = {"Ability Shield"	:	"This cute and rather unique-looking shield protects the holder from having its Ability changed by others."	,
-               "Absorb Bulb"	:	"This single-use bulb boosts the Sp. Atk stat if the holder is damaged by a Water-type attack."	,
-               "Adamant Crystal"	:	"An item to be held by Dialga. This large, glowing gem wells with power and allows the Pokémon to change form."	,
-               "Adamant Orb"	:	"A brightly shining gem to be held by Dialga. It boosts the power of Dialga's Dragon- and Steel-type moves."	,
-               "Air Balloon"	:	"This balloon makes the holder float in the air. If the holder is hit with an attack, the balloon will burst."	,
-               "Amulet Coin"	:	"It doubles any prize money received as long as the holder joins the battle at least once."	,
-               "Assault Vest"	:	"This offensive vest boosts the holder's Sp. Def stat but prevents the use of status moves."	,
-               "Berry Sweet"	:	"A berry-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Berserk Gene"	:	"Boosts ATTACK but causes confusion."	,
-               "Big Root"	:	"This root boosts the amount of HP the holder restores to itself when it uses HP-stealing moves."	,
-               "Binding Band"	:	"This band boosts the power of binding moves used by the holder."	,
-               "Black Belt"	:	"This belt helps with focus and boosts the power of the holder's Fighting-type moves."	,
-               "Black Glasses"	:	"It's a pair of shady- looking glasses that boost the power of the holder's Dark-type moves."	,
-               "Black Sludge"	:	"If the holder is a Poison type, this sludge will gradually restore its HP. It damages any other type."	,
-               "Blue Orb"	:	"A shiny blue orb that is said to have a deep connection to a legend of the Hoenn region."	,
-               "Blue Scarf"	:	"When a Pokémon holds this during a contest, it looks even more beautiful than usual."	,
-               "Blunder Policy"	:	"If the holder misses with a move due to low accuracy, this policy will sharply boost its Speed stat."	,
-               "Booster Energy"	:	"An item to be held by Pokémon with certain Abilities. The energy that fills this capsule boosts the strength of the Pokémon."	,
-               "Bright Powder"	:	"This glittery powder casts a tricky glare that lowers the accuracy of opposing Pokémon's moves."	,
-               "Bug Gem"	:	"This gem is imbued with the essence of bugs and will boost the power of a Bug-type move—but only once."	,
-               "Bug Memory"	:	"A memory disc that contains Bug-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Burn Drive"	:	"A cassette to be held by Genesect. It changes Genesect's Techno Blast move so it becomes Fire type."	,
-               "Cell Battery"	:	"This single-use battery boosts the Attack stat if the holder is damaged by an Electric-type attack."	,
-               "Charcoal"	:	"It's a combustible fuel that boosts the power of the holder's Fire-type moves."	,
-               "Chill Drive"	:	"A cassette to be held by Genesect. It changes Genesect's Techno Blast move so it becomes Ice type."	,
-               "Choice Band"	:	"This curious headband boosts the holder's Attack stat but only allows the use of a single move."	,
-               "Choice Scarf"	:	"This curious scarf boosts the holder's Speed stat but only allows the use of a single move."	,
-               "Choice Specs"	:	"These curious glasses boost the holder's Sp. Atk stat but only allow the use of a single move."	,
-               "Cleanse Tag"	:	"It helps keep wild Pokémon away when the holder is the head of the party."	,
-               "Clear Amulet"	:	"This clear, sparkling amulet protects the holder from having its stats lowered by moves used against it or by other Pokémon's Abilities."	,
-               "Clover Sweet"	:	"A clover-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Cornerstone Mask"	:	"An item to be held by Ogerpon. This carved wooden mask is adorned with crystals and allows Ogerpon to wield the Rock type during battle."	,
-               "Covert Cloak"	:	"This hooded cloak conceals the holder, tricking the eyes of its enemies and protecting it from the additional effects of moves."	,
-               "Damp Rock"	:	"When the holder changes the weather to rain, the rain will persist for longer than usual."	,
-               "Dark Gem"	:	"This gem is imbued with the essence of darkness and will boost the power of a Dark-type move—but only once."	,
-               "Dark Memory"	:	"A memory disc that contains Dark-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Deep Sea Scale"	:	"An item to be held by Clamperl. This scale shines with a faint pink and boosts Clamperl's Sp. Def stat."	,
-               "Deep Sea Tooth"	:	"An item to be held by Clamperl. This fang gleams a sharp silver and boosts Clamperl's Sp. Atk stat."	,
-               "Destiny Knot"	:	"Should the holder of this bright-red thread become infatuated, the Pokémon it is infatuated with will be similarly afflicted."	,
-               "Douse Drive"	:	"A cassette to be held by Genesect. It changes Genesect's Techno Blast move so it becomes Water type."	,
-               "Draco Plate"	:	"This stone tablet is imbued with the essence of dragons and boosts the power of the holder's Dragon-type moves."	,
-               "Dragon Fang"	:	"This hard, sharp fang boosts the power of the holder's Dragon-type moves."	,
-               "Dragon Gem"	:	"This gem is imbued with the essence of dragons and will boost the power of a Dragon-type move—but only once."	,
-               "Dragon Memory"	:	"A memory disc that contains Dragon-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Dread Plate"	:	"This stone tablet is imbued with the essence of darkness and boosts the power of the holder's Dark-type moves."	,
-               "Dubious Disc"	:	"A transparent device overflowing with dubious data. It's loved by a certain Pokémon."	,
-               "Earth Plate"	:	"This stone tablet is imbued with the essence of the earth and boosts the power of the holder's Ground-type moves."	,
-               "Eject Button"	:	"If the holder is damaged by an attack, it will be switched out of battle to be replaced by another Pokémon on your team."	,
-               "Eject Pack"	:	"If the holder's stats are lowered, it will be switched out of battle."	,
-               "Electirizer"	:	"A box packed with a tremendous amount of electric energy. It's loved by a certain Pokémon."	,
-               "Electric Gem"	:	"This gem is imbued with the essence of electricity and will boost the power of an Electric-type move—but only once."	,
-               "Electric Memory"	:	"A memory disc that contains Electric-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Electric Seed"	:	"If the terrain becomes Electric Terrain, the holder will use this seed to boost its own Defense stat."	,
-               "Everstone"	:	"A Pokémon holding this peculiar stone is prevented from evolving."	,
-               "Eviolite"	:	"This mysterious evolutionary lump boosts the Defense and Sp. Def stats when held by a Pokémon that can still evolve."	,
-               "Exp. Share"	:	"Turning on this special device will allow all the Pokémon on your team to share in Exp. Points gained."	,
-               "Expert Belt"	:	"It's a well-worn belt that slightly boosts the power of the holder's supereffective moves."	,
-               "Fairy Feather"	:	"This feather, which gleams faintly when hit by light, boosts the power of the holder's Fairy-type moves."	,
-               "Fairy Gem"	:	"This gem is imbued with the essence of fairies and will boost the power of a Fairy-type move—but only once."	,
-               "Fairy Memory"	:	"A memory disc that contains Fairy-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Fighting Gem"	:	"This gem is imbued with the essence of the fighting spirit and will boost the power of a Fighting-type move—but only once."	,
-               "Fighting Memory"	:	"A memory disc that contains Fighting-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Fire Gem"	:	"This gem is imbued with the essence of fire and will boost the power of a Fire-type move—but only once."	,
-               "Fire Memory"	:	"A memory disc that contains Fire-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Fist Plate"	:	"This stone tablet is imbued with the essence of the fighting spirit and boosts the power of the holder's Fighting-type moves."	,
-               "Flame Orb"	:	"It's a bizarre orb that gives off heat when touched and will afflict the holder with a burn during battle."	,
-               "Flame Plate"	:	"This stone tablet is imbued with the essence of fire and boosts the power of the holder's Fire-type moves."	,
-               "Float Stone"	:	"This very light stone reduces the weight of the holder."	,
-               "Flower Sweet"	:	"A flower-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Flying Gem"	:	"This gem is imbued with the essence of flight and will boost the power of a Flying-type move—but only once."	,
-               "Flying Memory"	:	"A memory disc that contains Flying-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Focus Band"	:	"When the holder is hit with a move that should knock it out, it may be able to endure with 1 HP."	,
-               "Focus Sash"	:	"If the holder has full HP and it is hit with a move that should knock it out, it will endure with 1 HP—but only once."	,
-               "Full Incense"	:	"This incense has a curious aroma that makes the holder move slower than usual."	,
-               "Ghost Gem"	:	"This gem is imbued with the essence of ghosts and will boost the power of a Ghost-type move—but only once."	,
-               "Ghost Memory"	:	"A memory disc that contains Ghost-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Grass Gem"	:	"This gem is imbued with the essence of plants and will boost the power of a Grass-type move—but only once."	,
-               "Grass Memory"	:	"A memory disc that contains Grass-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Grassy Seed"	:	"If the terrain becomes Grassy Terrain, the holder will use this seed to boost its own Defense stat."	,
-               "Green Scarf"	:	"When a Pokémon holds this during a contest, it looks even cleverer than usual."	,
-               "Grip Claw"	:	"When the holder uses moves that deal damage over several turns, such as Bind or Wrap, their effects will last longer than usual."	,
-               "Griseous Core"	:	"An item to be held by Giratina. This large, glowing gem wells with power and allows the Pokémon to change form."	,
-               "Griseous Orb"	:	"A shining gem to be held by Giratina. It boosts the power of Giratina's Dragon- and Ghost-type moves."	,
-               "Ground Gem"	:	"This gem is imbued with the essence of the earth and will boost the power of a Ground-type move—but only once."	,
-               "Ground Memory"	:	"A memory disc that contains Ground-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Hard Stone"	:	"It's a durable stone that boosts the power of the holder's Rock-type moves."	,
-               "Hearthflame Mask"	:	"An item to be held by Ogerpon. This carved wooden mask is adorned with crystals and allows Ogerpon to wield the Fire type during battle."	,
-               "Heat Rock"	:	"When the holder changes the weather to harsh sunlight, the sunlight will persist for longer than usual."	,
-               "Heavy-Duty Boots"	:	"These boots protect the holder from the effects of traps and the like set on the battlefield."	,
-               "Ice Gem"	:	"This gem is imbued with the essence of ice and will boost the power of an Ice-type move—but only once."	,
-               "Ice Memory"	:	"A memory disc that contains Ice-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Icicle Plate"	:	"This stone tablet is imbued with the essence of ice and boosts the power of the holder's Ice-type moves."	,
-               "Icy Rock"	:	"When the holder changes the weather to snow, the snow will persist for longer than usual."	,
-               "Insect Plate"	:	"This stone tablet is imbued with the essence of bugs and boosts the power of the holder's Bug-type moves."	,
-               "Iron Ball"	:	"It lowers the holder's Speed stat and makes the holder vulnerable to Ground- type moves even if it is a Flying type or is levitating."	,
-               "Iron Plate"	:	"This stone tablet is imbued with the essence of steel and boosts the power of the holder's Steel-type moves."	,
-               "King's Rock"	:	"It may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack."	,
-               "Lagging Tail"	:	"A tail of something, this item is tremendously heavy and makes the holder move slower than usual."	,
-               "Lax Incense"	:	"The curious aroma of this incense may cause moves to miss its holder."	,
-               "Leek"	:	"An item to be held by Farfetch'd. This very long and stiff stalk of leek boosts the critical-hit ratio of Farfetch'd's moves."	,
-               "Leftovers"	:	"The holder's HP is slowly but steadily restored throughout a battle."	,
-               "Life Orb"	:	"It boosts the power of the holder's moves, but the holder also loses a small amount of HP with each attack it lands."	,
-               "Light Ball"	:	"An item to be held by Pikachu. It's a mysterious orb that boosts Pikachu's Attack and Sp. Atk stats."	,
-               "Light Clay"	:	"When the holder uses protective moves like Light Screen or Reflect, their effects will last longer than usual."	,
-               "Loaded Dice"	:	"This loaded dice always rolls a good number, and holding one can ensure that the holder's multistrike moves hit more times."	,
-               "Love Sweet"	:	"A heart-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Luck Incense"	:	"It doubles any prize money received as long as the holder joins the battle at least once."	,
-               "Lucky Egg"	:	"It's an egg filled with happiness that earns the holder extra Exp. Points."	,
-               "Lucky Punch"	:	"An item to be held by Chansey. This lucky boxing glove boosts the critical-hit ratio of Chansey's moves."	,
-               "Luminous Moss"	:	"This single-use luminous moss boosts the Sp. Def stat if the holder is damaged by a Water-type move."	,
-               "Lustrous Globe"	:	"An item to be held by Palkia. This large, glowing orb wells with power and allows the Pokémon to change form."	,
-               "Lustrous Orb"	:	"A beautifully shining gem to be held by Palkia. It boosts the power of Palkia's Dragon- and Water-type moves."	,
-               "Macho Brace"	:	"Holding this stiff, heavy brace reduces a Pokémon's Speed in battle but allows its stats to grow more quickly."	,
-               "Magmarizer"	:	"A box packed with a tremendous amount of magma energy. It's loved by a certain Pokémon."	,
-               "Magnet"	:	"It's a powerful magnet that boosts the power of the holder's Electric-type moves."	,
-               "Meadow Plate"	:	"This stone tablet is imbued with the essence of plants and boosts the power of the holder's Grass-type moves."	,
-               "Mental Herb"	:	"The holder will be able to shake off move-binding effects to move freely— but only once."	,
-               "Metal Coat"	:	"It's a special metallic coating that boosts the power of the holder's Steel-type moves."	,
-               "Metal Powder"	:	"An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts Ditto's Defense stat."	,
-               "Metronome"	:	"It boosts the power of a move that's used repeatedly. Once the chain is broken, the move's power returns to normal."	,
-               "Mind Plate"	:	"This stone tablet is imbued with the essence of psychic energy and boosts the power of the holder's Psychic-type moves."	,
-               "Miracle Seed"	:	"It's a seed imbued with life-force that boosts the power of the holder's Grass-type moves."	,
-               "Mirror Herb"	:	"This herb will allow the holder to mirror an opponent's stat increases to boost its own stats—but only once."	,
-               "Misty Seed"	:	"If the terrain becomes Misty Terrain, the holder will use this seed to boost its own Sp. Def stat."	,
-               "Muscle Band"	:	"This headband exudes strength, slightly boosting the power of the holder's physical moves."	,
-               "Mystic Water"	:	"This teardrop-shaped gem boosts the power of the holder's Water-type moves."	,
-               "Never-Melt Ice"	:	"It's a heat-repelling piece of ice that boosts the power of the holder's Ice- type moves."	,
-               "Normal Gem"	:	"This gem is imbued with the essence of normalcy and will boost the power of a Normal-type move—but only once."	,
-               "Odd Incense"	:	"This incense has a curious aroma that boosts the power of the holder's Psychic-type moves."	,
-               "Pink Bow"	:	"Powers up normal-type moves."	,
-               "Pink Scarf"	:	"When a Pokémon holds this during a contest, it looks even cuter than usual."	,
-               "Pixie Plate"	:	"This stone tablet is imbued with the essence of fairies and boosts the power of the holder's Fairy-type moves."	,
-               "Poison Barb"	:	"This small poisonous barb boosts the power of the holder's Poison-type moves."	,
-               "Poison Gem"	:	"This gem is imbued with the essence of poison and will boost the power of a Poison-type move—but only once."	,
-               "Poison Memory"	:	"A memory disc that contains Poison-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Polkadot Bow"	:	"Powers up normal-type moves."	,
-               "Power Lens"	:	"Holding this lens reduces a Pokémon's Speed in battle but allows its Sp. Atk stat to grow more quickly."	,
-               "Protective Pads"	:	"These pads protect the holder from effects triggered by making direct contact with another Pokémon."	,
-               "Protector"	:	"A protective item of some sort. It is extremely stiff and heavy. It's loved by a certain Pokémon."	,
-               "Psychic Gem"	:	"This gem is imbued with the essence of psychic energy and will boost the power of a Psychic-type move—but only once."	,
-               "Psychic Memory"	:	"A memory disc that contains Psychic-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Psychic Seed"	:	"If the terrain becomes Psychic Terrain, the holder will use this seed to boost its own Sp. Def stat."	,
-               "Punching Glove"	:	"This protective glove boosts the power of the holder's punching moves and prevents direct contact with targets."	,
-               "Pure Incense"	:	"It helps keep wild Pokémon away when the holder is the head of the party."	,
-               "Quick Claw"	:	"This light, sharp claw lets the holder move first occasionally."	,
-               "Quick Powder"	:	"An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts Ditto's Speed stat."	,
-               "Razor Claw"	:	"This sharply hooked claw boosts the critical-hit ratio of the holder's moves."	,
-               "Razor Fang"	:	"This sharply hooked fang may cause the target to flinch whenever the holder successfully inflicts damage on them with an attack."	,
-               "Reaper Cloth"	:	"A cloth imbued with horrifyingly strong spiritual energy. It's loved by a certain Pokémon."	,
-               "Red Card"	:	"If the holder is damaged by an attack, the mysterious power of this card can remove the attacker from the battle."	,
-               "Red Orb"	:	"A shiny red orb that is said to have a deep connection to a legend of the Hoenn region."	,
-               "Red Scarf"	:	"When a Pokémon holds this during a contest, it looks even cooler than usual."	,
-               "Ribbon Sweet"	:	"A ribbon-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Ring Target"	:	"Moves that would normally have no effect due to type matchups will still hit the holder."	,
-               "Rock Gem"	:	"This gem is imbued with the essence of rock and will boost the power of a Rock-type move—but only once."	,
-               "Rock Incense"	:	"This incense has a curious aroma that boosts the power of the holder's Rock-type moves."	,
-               "Rock Memory"	:	"A memory disc that contains Rock-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Rocky Helmet"	:	"If another Pokémon makes direct contact with the holder, that Pokémon will be damaged."	,
-               "Room Service"	:	"If Trick Room takes effect, this item will lower the holder's Speed stat."	,
-               "Rose Incense"	:	"This incense has a curious aroma that boosts the power of the holder's Grass-type moves."	,
-               "Rusted Shield"	:	"It is said that a hero used this shield to halt a terrible disaster in ancient times. But it's grown rusty and worn."	,
-               "Rusted Sword"	:	"It is said that a hero used this sword to halt a terrible disaster in ancient times. But it's grown rusty and worn."	,
-               "Safety Goggles"	:	"These goggles protect the holder from both sandstorm damage and the effects of powders and spores."	,
-               "Scope Lens"	:	"It's a lens for scoping out weak points. It boosts the holder's critical-hit ratio."	,
-               "Sea Incense"	:	"This incense has a curious aroma that boosts the power of the holder's Water-type moves."	,
-               "Sharp Beak"	:	"It's a long, sharp beak that boosts the power of the holder's Flying-type moves."	,
-               "Shed Shell"	:	"Hard and sturdy, this discarded carapace enables the holder to switch out of battle without fail."	,
-               "Shell Bell"	:	"The holder restores a little HP to itself every time it inflicts damage with an attack."	,
-               "Shock Drive"	:	"A cassette to be held by Genesect. It changes Genesect's Techno Blast move so it becomes Electric type."	,
-               "Silk Scarf"	:	"It's a sumptuous scarf that boosts the power of the holder's Normal-type moves."	,
-               "Silver Powder"	:	"It's a shiny silver powder that boosts the power of the holder's Bug-type moves."	,
-               "Sky Plate"	:	"This stone tablet is imbued with the essence of flight and boosts the power of the holder's Flying-type moves."	,
-               "Smoke Ball"	:	"It enables the holder to flee from any wild Pokémon encounter without fail."	,
-               "Smooth Rock"	:	"When the holder changes the weather to a sandstorm, the storm will persist for longer than usual."	,
-               "Snowball"	:	"This single-use ball of snow boosts the Attack stat if the holder is damaged by an Ice-type move."	,
-               "Soft Sand"	:	"It's a loose, silky sand that boosts the power of the holder's Ground-type moves."	,
-               "Soothe Bell"	:	"The comforting chime of this bell calms the holder, making it friendly."	,
-               "Soul Dew"	:	"A wondrous orb to be held by Latios or Latias. It boosts the power of their Psychic- and Dragon-type moves."	,
-               "Spell Tag"	:	"It's a sinister, eerie tag that boosts the power of the holder's Ghost-type moves."	,
-               "Splash Plate"	:	"This stone tablet is imbued with the essence of water and boosts the power of the holder's Water-type moves."	,
-               "Spooky Plate"	:	"This stone tablet is imbued with the essence of ghosts and boosts the power of the holder's Ghost-type moves."	,
-               "Star Sweet"	:	"A star-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Steel Gem"	:	"This gem is imbued with the essence of steel and will boost the power of a Steel-type move—but only once."	,
-               "Steel Memory"	:	"A memory disc that contains Steel-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Sticky Barb"	:	"It damages the holder every turn and may latch on to Pokémon that make direct contact with the holder."	,
-               "Stone Plate"	:	"This stone tablet is imbued with the essence of rock and boosts the power of the holder's Rock-type moves."	,
-               "Strawberry Sweet"	:	"A strawberry-shaped sweet. When a Milcery holds this, it spins around happily."	,
-               "Terrain Extender"	:	"It extends the duration of terrain caused by the holder's move or Ability."	,
-               "Thick Club"	:	"An item to be held by Cubone or Marowak. This hard bone of unknown origin boosts their Attack stat."	,
-               "Throat Spray"	:	"If the holder uses a sound-based move, this throat spray will boost its Sp. Atk stat."	,
-               "Toxic Orb"	:	"It's a bizarre orb that exudes toxins when touched and will badly poison the holder during battle."	,
-               "Toxic Plate"	:	"This stone tablet is imbued with the essence of poison and boosts the power of the holder's Poison-type moves."	,
-               "Twisted Spoon"	:	"This spoon is imbued with telekinetic energy and boosts the power of the holder's Psychic-type moves."	,
-               "Utility Umbrella"	:	"This sturdy umbrella protects the holder from the effects of rain and harsh sunlight."	,
-               "Water Gem"	:	"This gem is imbued with the essence of water and will boost the power of a Water-type move—but only once."	,
-               "Water Memory"	:	"A memory disc that contains Water-type data. It changes the type of the holder if held by a certain species of Pokémon."	,
-               "Wave Incense"	:	"This incense has a curious aroma that boosts the power of the holder's Water-type moves."	,
-               "Weakness Policy"	:	"If the holder is hit with a move it's weak to, this policy sharply boosts its Attack and Sp. Atk stats."	,
-               "Wellspring Mask"	:	"An item to be held by Ogerpon. This carved wooden mask is adorned with crystals and allows Ogerpon to wield the Water type during battle."	,
-               "White Herb"	:	"It will restore any lowered stat in battle—but only once."	,
-               "Wide Lens"	:	"It's a magnifying lens that slightly boosts the accuracy of the holder's moves."	,
-               "Wise Glasses"	:	"This thick pair of glasses slightly boosts the power of the holder's special moves."	,
-               "Yellow Scarf"	:	"When a Pokémon holds this during a contest, it looks even tougher than usual."	,
-               "Zap Plate"	:	"This stone tablet is imbued with the essence of electricity and boosts the power of the holder's Electric-type moves."	,
-               "Zoom Lens"	:	"When the holder acts after its target, its move will be more accurate than usual."	}
+battle_des = {"Ability Shield"	:	"""Effect 
+              An item to be held by a Pokémon. This protects the holder from having its Ability changed by an opponent's move or Ability.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Absorb Bulb"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Special Attack if it gets hits with an Water type attack. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Adrenaline Orb"	:	"""Effect 
+              If held by a Pokemon, it increases the Speed of the holder by one stage when intimidated.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Air Balloon"	:	"""Effect 
+              An item to be held by a Pokemon. Grants the holder immunity to Ground-type moves and entry hazards. This item will pop if the holder is hit.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Assault Vest"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Special Defense by 50% but the holder can only use damaging attacks.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Porto Marinada"""	,
+             "Big Root"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the amount of HP the holder recovers after using moves that steal HP by 30%.  Location(s) 
+              • Cascarrafa Delibird Presents 
+              • Cortondo"""	,
+             "Binding Band"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the damage caused by the holder's moves that bind or constrict the opponent.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Black Belt"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Fighting-type moves by 20%.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Black Glasses"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Dark-type moves by 20%.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Black Sludge"	:	"""Effect 
+              An item to be held by a Pokemon. Restores 6.25% of the holder's max HP if it's a Poison type, if not the holder takes 6.25% of its max HP worth of damage.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Blunder Policy"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Speed by two stages if a move that it uses misses because of Accuracy.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Booster Energy"	:	"""Effect 
+              An item to be held by a Paradox Pokémon. Activates the Protosynthesis or Quark Drive Ability of a Paradox Pokemon which boosts its highest stat.  Location(s) 
+              • The Great Crater of Paldea 
+              • Held Item from: Great Tusk / Brute Bonnet / Sandy Shocks / Scream Tail / Flutter Mane / Slither Wing / Roaring Moon / Iron Treads / Iron Moth / Iron Hands / Iron Jugulis / Iron Thorns / Iron Bundle / Iron Valiant"""	,
+             "Bright Powder"	:	"""Effect 
+              An item to be held by a Pokemon. Lowers the Accuracy of moves that target the holder by 10%.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Cell Battery"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Attack if it gets hits with an Electric type attack. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Charcoal"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Fire-type moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Choice Band"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Attack by 50% but only allows the use of one move each time it comes to the battlefield.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Choice Scarf"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Speed by 50% but only allows the use of one move each time it comes to the battlefield.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Choice Specs"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Special Attack by 50% but only allows the use of one move each time it comes to the battlefield.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Clear Amulet"	:	"""Effect 
+              An item to be held by a Pokémon. Protects the holder from having its stats lowered by an opponent's move or Ability.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Defeat 9 Trainers in West Province (Area One)"""	,
+             "Cornerstone Mask"	:	"""Effect 
+              An item to be held by Ogerpon which allows it to change into its Cornerstone Mask form.  Location(s) 
+              • Defeat Titanic Okidogi"""	,
+             "Covert Cloak"	:	"""Effect 
+              An item to be held by a Pokémon. Protects the holder from being affected from additional effects by an opponent's move.  Location(s) 
+              • Levincia Delibird Presents 
+              • Montenevera"""	,
+             "Damp Rock"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder uses Rain Dance, the effects will last for 8 turns instead of 5.  Location(s) 
+              • Cascarrafa Delibird Presents 
+              • Sparkling Dropped Item"""	,
+             "Dragon Fang"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Dragon-type moves by 20%.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Eject Button"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder gets hit by an attack that makes direct contact, it will switch out with another Party Pokemon.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Eject Pack"	:	"""Effect 
+              An item to be held by a Pokemon. Switches out the holder from battle if its stats are lowered by opponents or itself.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Electric Seed"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Defense by one stage when Electric Terrain is activated.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Eviolite"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Defense and Special Defense by 50% if the holder can still evolve.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Defeat 7 Trainers in South Province (Area Five)"""	,
+             "Expert Belt"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's super effective moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Defeat 4 Trainers in Dalizapa Passage"""	,
+             "Fairy Feather"	:	"""Effect 
+              An item to be held by a Pokemon. Boosts the power of the holder's Fairy-type moves.  Location(s) 
+              • Oger Oustin' 
+              • Ogre Oustin' Reward"""	,
+             "Flame Orb"	:	"""Effect 
+              An item to be held by a Pokemon. Burns the holder at the end of every turn if the holder is not burned.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Float Stone"	:	"""Effect 
+              An item to be held by a Pokemon. Reduces the holder's weight in half.  Location(s) 
+              • Sparkling Dropped Item"""	,
+             "Focus Band"	:	"""Effect 
+              An item to be held by a Pokemon. Gives the user a 10% chance of surviving a Knock Out attack, leaving the user with 1 HP.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Focus Sash"	:	"""Effect 
+              An item to be held by a Pokemon. Prevents the holder from fainting and keeps it at 1 HP if it has full HP. This item disappears after use.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Grassy Seed"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Defense by one stage when Grassy Terrain is activated.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Grip Claw"	:	"""Effect 
+              An item to be held by a Pokemon. Further extends the holder's Bind, Wrap, Fire Spin, Whirlpool, Uproar, Outrage or Sand Tomb moves for another 5 turns.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Hard Stone"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Rock-type moves by 20%.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Hearthflame Mask"	:	"""Effect 
+              An item to be held by Ogerpon which allows it to change into its Hearthflame Mask form.  Location(s) 
+              • Defeat Titanic Fezandipiti"""	,
+             "Heat Rock"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder uses Sunny Day, the effects will last for 8 turns instead of 5.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Heavy-Duty Boots"	:	"""Effect 
+              An item to be held by a Pokemon. Protects the holder from the effects of traps on the battlefield such as Spikes, Toxic Spikes, or Stealth Rocks.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Icy Rock"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder summons a snowstorm, the effects will last for 8 turns instead of 5.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Iron Ball"	:	"""Effect 
+              An item to be held by a Pokemon. Reduces the holder's Speed by 50%, if it is a Flying-type or has the Levitate ability, the holder becomes susceptible to Ground type attacks.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Lagging Tail"	:	"""Effect 
+              An item to be held by a Pokemon. The holder will always move last in the turn. The holder is unaffected by Trick Room.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Leftovers"	:	"""Effect 
+              An item to be held by a Pokemon. Restores the holder's 6.25% of its max HP at the end of every turn.  Location(s) 
+              • Cascarrafa Delibird Presents 
+              • Medali"""	,
+             "Life Orb"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the damage of the holder's moves by 30% but the holder loses 10% of its max HP after using a damaging move.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Casseroya Lake"""	,
+             "Light Ball"	:	"""Effect 
+              An item to be held by a Pokemon. When held by Pikachu, doubles the Attack and Special Attack of the holder.  Location(s) 
+              • Held Item from: Pikachu"""	,
+             "Light Clay"	:	"""Effect 
+              An item to be held by a Pokemon. Prolongs the effects of moves like Light Screen, Reflect, and Aurora Veil to make them last eight turns instead of five.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Loaded Dice"	:	"""Effect 
+              An item to be held by a Pokémon. Allows the holder's multi-hit move to hit at least four times.  Location(s) 
+              • Levincia Delibird Presents 
+              • Defeat 5 Trainers in East Province (Area One)"""	,
+             "Luminous Moss"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Special Defense by one stage if it gets hit with a Water type attack. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Magnet"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Electric-type moves by 20%.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Mental Herb"	:	"""Effect 
+              An item to be held by a Pokemon. Snaps the holder out of infatuation and removes move-binding effects as well as the effects of Taunt, Encore, or Torment. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Metronome"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the damage of moves used consecutively by 20%. It stops increasing at 100% and resets if a different move is used.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Miracle Seed"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Grass-type moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Sparkling Dropped Item"""	,
+             "Mirror Herb"	:	"""Effect 
+              An item to be held by a Pokémon. The holder copies its opponent's stat boost. This item disappears after use. This item also allows a Pokemon to receive an Egg Move from another Pokemon during Picnics, provided that it has a vacant move slot.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Misty Seed"	:	"""Effect 
+              An item to be held by a Pokemon. It boost the holder's Special Defense by one stage when Misty Terrain is activated. It disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Muscle Band"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's physical attacks by 10%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Cascarrafa"""	,
+             "Mystic Water"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Water-type moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Never-Melt Ice"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Ice-type moves by 20%.  Location(s) 
+              • Levincia Delibird Presents 
+              • Gym Challenge Rerun Reward"""	,
+             "Normal Gem"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the damage of a Normal-type move by 30% once. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Poison Barb"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Poison-type moves by 20%.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Power Herb"	:	"""Effect 
+              An item to be held by a Pokemon. Allows the holder to skip the charging stage required from moves like Bounce, Dig, Dive, Fly, Phantom Force, Sky Attack, Solar Beam, or Solar Blade to immediately attack. Disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Protective Pads"	:	"""Effect 
+              An item to be held by a Pokemon. Protects the holder from effects or damage cause by making direct contact with the opponent.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Psychic Seed"	:	"""Effect 
+              An item to be held by a Pokemon. It boost the holder's Special Defense by one stage when Psychic Terrain is activated. It disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents 
+              • Sparkling Dropped Item"""	,
+             "Punching Glove"	:	"""Effect 
+              An item to be held by a Pokémon. Boosts the power of punching moves by 10% while allowing the user to not get in direct contact with its target.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Defeat 7 Trainers in East Province (Area Three)"""	,
+             "Quick Claw"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the chance of the holder to make the first move in a turn by 20% if the moves are within the same Speed Priority level.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Artazon"""	,
+             "Red Card"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder is attacked with a physical move, the attacker will be removed from battle.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Ring Target"	:	"""Effect 
+              An item to be held by a Pokemon. Allows the holder to receive damage from the opponent disregarding type immunities the holder may have.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Rocky Helmet"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder is hit with a physical attack, the attacker receives recoil damage as well.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Defeat 5 Trainers in South Province (Area Four)
+              • Zapapico"""	,
+             "Room Service"	:	"""Effect 
+              An item to be held by a Pokemon. Lowers the holder's Speed by one stage when Trick Room is activated.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Safety Goggles"	:	"""Effect 
+              An item to be held by a Pokemon. It protects the holder from weather effects and Powder based moves such as Sleep Powder.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Scope Lens"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Critical Hit ratio by one.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Sharp Beak"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Flying-type moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Shed Shell"	:	"""Effect 
+              An item to be held by a Pokemon. Enables the holder to switch out of battle without fail.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Shell Bell"	:	"""Effect 
+              An item to be held by a Pokemon. The holder recovers 12.5% of the damage it inflicts on opponents.  Location(s) 
+              • Levincia Delibird Presents 
+              • Defeat 6 Trainers in South Province (Area Three)"""	,
+             "Silk Scarf"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Normal-type moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Silver Powder"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Bug-type moves by 20%.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Smooth Rock"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder uses Sandstorm, the effects will last for 8 turns instead of 5.  Location(s) 
+              • Cascarrafa Delibird Presents 
+              • Sparkling Dropped Item"""	,
+             "Snowball"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Attack by one stage if it gets hit with an Ice type Attack. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Soft Sand"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the damage of Ground-type moves known by the holder by 20%.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Spell Tag"	:	"""Effect 
+              An item to be held by Pokemon. It increases the damage of Ghost-type moves done by the user by 20%.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Sticky Barb"	:	"""Effect 
+              An item to be held by a Pokemon. It damages the holder 12.5% of its max HP every turn. Opponents who make direct contact with the holder will lose 12.5% of its max HP as well, if the opponent doesn't have a Held item it will stick to them instead.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Terrain Extender"	:	"""Effect 
+              An item to be held by a Pokemon. Extends the duration of terrains activated by the Holder for 3 more turns.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Throat Spray"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Special Attack by one stage when it uses a Sound based move.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Toxic Orb"	:	"""Effect 
+              An item to be held by a Pokemon. Poisons the holder at the end of every turn if the holder is not poisoned.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Twisted Spoon"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Psychic-type moves by 20%.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Utility Umbrella"	:	"""Effect 
+              An item to be held by a Pokemon. Protects the holder from weather effects.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Weakness Policy"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Attack and Special Attack by two stages each time the holder is hit with a super effective move.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Wellspring Mask"	:	"""Effect 
+              An item to be held by Ogerpon which allows it to change into its Wellspring Mask form.  Location(s) 
+              • Defeat Titanic Munkidogi"""	,
+             "White Herb"	:	"""Effect 
+              An item to be held by a Pokemon. Restores any lowered stat of the holder in a battle after using a move. This item disappears after use.  Location(s) 
+              • Cascarrafa Delibird Presents"""	,
+             "Wide Lens"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the Accuracy of the moves used by the holder by 10%.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             "Wise Glasses"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Special Attack by 10%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia"""	,
+             "Zoom Lens"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the holder's Accuracy by 20% if it moves last in the turn.  Location(s) 
+              • Levincia Delibird Presents"""	,
+             ""	:	""	,
+             ""	:	""	,
+             "King's Rock"	:	"""Effect 
+              An item to be held by a Pokemon. The holder has a 10% chance of causing the opponent to flinch whenever it attacks. When held by Slowpoke and traded, it will evolve into Slowking.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Porto Marinada Auction
+              • Mesagoza"""	,
+             "Leader’s Crest"	:	"""Effect 
+              An item held by wild Bisharp that are leading a group of Pawniards.  Location(s) 
+              • Held Item from: Bisharp"""	,
+             "Masterpiece Teacup"	:	"""Effect 
+              An item used to evolve an Artisan Form Poltchageist into a Masterpiece Form Sinistcha.  Location(s) 
+              • Timeless Woods"""	,
+             "Metal Coat"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the damage of Steel type moves known by the holder by 20%. When held by Scyther and traded, it will evolve into Scizor.  Location(s) 
+              • Levincia Delibird Presents 
+              • Porto Marinada Auction"""	,
+             "Prism Scale"	:	"""Effect 
+              An item used to evolve Feebas into Milotic.  Location(s) 
+              • Fellhorn Gorge 
+              • Kitakami Pokedex Progress Reward"""	,
+             "Razor Claw"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the critical-hit ratio of the user by one stage. When held by Sneasel and leveled up at night, it will evolve into Weavile.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Porto Marinada Auction"""	,
+             "Razor Fang"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the chance of opponent flinching by 10%. When held by Gligar and leveled up at night, it will evolve into Gliscor.  Location(s) 
+              • Wistful Fields 
+              • Ogre Oustin' Reward 
+              • Kitakami Pokedex Progress Reward"""	,
+             "Reaper Cloth"	:	"""Effect 
+              An item used to evolve Dusclops into Dusknoir.  Location(s) 
+              • Kitakami Pokedex Progress Reward 
+              • Timeless Woods
+              • Kitakami Pokedex Progress Reward"""	,
+             "Syrupy Apple"	:	"""Effect 
+              An item used to evolve Applin into Dipplin.  Location(s) 
+              • Mossfell Confluence"""	,
+             "Unremarkable Teacup"	:	"""Effect 
+              An item used to evolve a Counterfeit Form Poltchageist into an Unremarkable Form Sinistcha.  Location(s) 
+              • Oni Mountain"""	,
+             "Held Items with Overworld Effects"	:	""	,
+             "Item"	:	"Effect / Location"	,
+             "Amulet Coin"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder is sent into a Trainer Battle, the money earned after the battle is doubled.  Location(s) 
+              • Defeat 5 Trainers in West Province (Area Three)"""	,
+             "Smoke Ball"	:	"""Effect 
+              An item to be held by a Pokemon. It guarantees the holder's escape from any wild Pokemon.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Exp/EV Training and Breeding Held Items"	:	""	,
+             "Item"	:	"Effect / Location"	,
+             "Destiny Knot"	:	"""Effect 
+              An item to be held by a Pokemon. If the holder becomes the infatuated, the Pokemon it is attracted to also becomes infatuated with the holder. When attached to a Pokemon while breeding, the offspring will get 5 IVs from its parents.  Location(s) 
+              • Mesagoza Delibird Presents"""	,
+             "Everstone"	:	"""Effect 
+              An item to be held by a Pokemon. It prevents the holder from evolving through leveling up. If a female Pokemon or a Ditto holds this item while in a Pokemon Nursery it will pass down its nature to its offspring.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Lucky Egg"	:	"""Effect 
+              An item to be held by a Pokemon. Increases the amount of Experience Points earned by the holder in battle by 50%.  Location(s) 
+              • Obtain After Getting 5th Gym Badge"""	,
+             "Power Anklet"	:	"""Effect 
+              An item to be held by a Pokemon. It prioritizes the Speed stat to grow more after every battle in exchange for reducing the holder's Speed by 50%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Power Band"	:	"""Effect 
+              An item to be held by a Pokemon. It prioritizes the Special Defense stat to grow more after every battle in exchange for reducing the holder's Speed by 50%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Power Belt"	:	"""Effect 
+              An item to be held by a Pokemon. It prioritizes the Defense stat to grow more after every battle in exchange for reducing the holder's Speed by 50%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Power Bracer"	:	"""Effect 
+              An item to be held by a Pokemon. It prioritizes the Attack stat to grow more after every battle in exchange for reducing the holder's Speed by 50%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Power Lens"	:	"""Effect 
+              An item to be held by a Pokemon. It prioritizes the Special Attack stat to grow more after every battle in exchange for reducing the holder's Speed by 50%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Power Weight"	:	"""Effect 
+              An item to be held by a Pokemon. It prioritizes the HP stat to grow more after every battle in exchange for reducing the holder's Speed by 50%.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,
+             "Soothe Bell"	:	"""Effect 
+              An item to be held by a Pokemon. It doubles the Friendship earned by the holder.  Location(s) 
+              • Mesagoza Delibird Presents 
+              • Levincia Delibird Presents
+              • Cascarrafa Delibird Presents"""	,}
+
+
+all_battle_items = ["Ability Shield"	,
+                  "Absorb Bulb"	,
+                  "Adamant Crystal"	,
+                  "Adamant Orb"	,
+                  "Air Balloon"	,
+                  "Amulet Coin"	,
+                  "Assault Vest"	,
+                  "Berry Sweet"	,
+                  "Berserk Gene"	,
+                  "Big Root"	,
+                  "Binding Band"	,
+                  "Black Belt"	,
+                  "Black Glasses"	,
+                  "Black Sludge"	,
+                  "Blue Orb"	,
+                  "Blue Scarf"	,
+                  "Blunder Policy"	,
+                  "Booster Energy"	,
+                  "Bright Powder"	,
+                  "Bug Gem"	,
+                  "Bug Memory"	,
+                  "Burn Drive"	,
+                  "Cell Battery"	,
+                  "Charcoal"	,
+                  "Chill Drive"	,
+                  "Choice Band"	,
+                  "Choice Scarf"	,
+                  "Choice Specs"	,
+                  "Cleanse Tag"	,
+                  "Clear Amulet"	,
+                  "Clover Sweet"	,
+                  "Cornerstone Mask"	,
+                  "Covert Cloak"	,
+                  "Damp Rock"	,
+                  "Dark Gem"	,
+                  "Dark Memory"	,
+                  "Deep Sea Scale"	,
+                  "Deep Sea Tooth"	,
+                  "Destiny Knot"	,
+                  "Douse Drive"	,
+                  "Draco Plate"	,
+                  "Dragon Fang"	,
+                  "Dragon Gem"	,
+                  "Dragon Memory"	,
+                  "Dread Plate"	,
+                  "Dubious Disc"	,
+                  "Earth Plate"	,
+                  "Eject Button"	,
+                  "Eject Pack"	,
+                  "Electirizer"	,
+                  "Electric Gem"	,
+                  "Electric Memory"	,
+                  "Electric Seed"	,
+                  "Everstone"	,
+                  "Eviolite"	,
+                  "Exp. Share"	,
+                  "Expert Belt"	,
+                  "Fairy Feather"	,
+                  "Fairy Gem"	,
+                  "Fairy Memory"	,
+                  "Fighting Gem"	,
+                  "Fighting Memory"	,
+                  "Fire Gem"	,
+                  "Fire Memory"	,
+                  "Fist Plate"	,
+                  "Flame Orb"	,
+                  "Flame Plate"	,
+                  "Float Stone"	,
+                  "Flower Sweet"	,
+                  "Flying Gem"	,
+                  "Flying Memory"	,
+                  "Focus Band"	,
+                  "Focus Sash"	,
+                  "Full Incense"	,
+                  "Ghost Gem"	,
+                  "Ghost Memory"	,
+                  "Grass Gem"	,
+                  "Grass Memory"	,
+                  "Grassy Seed"	,
+                  "Green Scarf"	,
+                  "Grip Claw"	,
+                  "Griseous Core"	,
+                  "Griseous Orb"	,
+                  "Ground Gem"	,
+                  "Ground Memory"	,
+                  "Hard Stone"	,
+                  "Hearthflame Mask"	,
+                  "Heat Rock"	,
+                  "Heavy-Duty Boots"	,
+                  "Ice Gem"	,
+                  "Ice Memory"	,
+                  "Icicle Plate"	,
+                  "Icy Rock"	,
+                  "Insect Plate"	,
+                  "Iron Ball"	,
+                  "Iron Plate"	,
+                  "King's Rock"	,
+                  "Lagging Tail"	,
+                  "Lax Incense"	,
+                  "Leek"	]
+all_battle_items_2 = [
+                  "Leftovers"	,
+                  "Life Orb"	,
+                  "Light Ball"	,
+                  "Light Clay"	,
+                  "Loaded Dice"	,
+                  "Love Sweet"	,
+                  "Luck Incense"	,
+                  "Lucky Egg"	,
+                  "Lucky Punch"	,
+                  "Luminous Moss"	,
+                  "Lustrous Globe"	,
+                  "Lustrous Orb"	,
+                  "Macho Brace"	,
+                  "Magmarizer"	,
+                  "Magnet"	,
+                  "Meadow Plate"	,
+                  "Mental Herb"	,
+                  "Metal Coat"	,
+                  "Metal Powder"	,
+                  "Metronome"	,
+                  "Mind Plate"	,
+                  "Miracle Seed"	,
+                  "Mirror Herb"	,
+                  "Misty Seed"	,
+                  "Muscle Band"	,
+                  "Mystic Water"	,
+                  "Never-Melt Ice"	,
+                  "Normal Gem"	,
+                  "Odd Incense"	,
+                  "Pink Bow"	,
+                  "Pink Scarf"	,
+                  "Pixie Plate"	,
+                  "Poison Barb"	,
+                  "Poison Gem"	,
+                  "Poison Memory"	,
+                  "Polkadot Bow"	,
+                  "Power Lens"	,
+                  "Protective Pads"	,
+                  "Protector"	,
+                  "Psychic Gem"	,
+                  "Psychic Memory"	,
+                  "Psychic Seed"	,
+                  "Punching Glove"	,
+                  "Pure Incense"	,
+                  "Quick Claw"	,
+                  "Quick Powder"	,
+                  "Razor Claw"	,
+                  "Razor Fang"	,
+                  "Reaper Cloth"	,
+                  "Red Card"	,
+                  "Red Orb"	,
+                  "Red Scarf"	,
+                  "Ribbon Sweet"	,
+                  "Ring Target"	,
+                  "Rock Gem"	,
+                  "Rock Incense"	,
+                  "Rock Memory"	,
+                  "Rocky Helmet"	,
+                  "Room Service"	,
+                  "Rose Incense"	,
+                  "Rusted Shield"	,
+                  "Rusted Sword"	,
+                  "Safety Goggles"	,
+                  "Scope Lens"	,
+                  "Sea Incense"	,
+                  "Sharp Beak"	,
+                  "Shed Shell"	,
+                  "Shell Bell"	,
+                  "Shock Drive"	,
+                  "Silk Scarf"	,
+                  "Silver Powder"	,
+                  "Sky Plate"	,
+                  "Smoke Ball"	,
+                  "Smooth Rock"	,
+                  "Snowball"	,
+                  "Soft Sand"	,
+                  "Soothe Bell"	,
+                  "Soul Dew"	,
+                  "Spell Tag"	,
+                  "Splash Plate"	,
+                  "Spooky Plate"	,
+                  "Star Sweet"	,
+                  "Steel Gem"	,
+                  "Steel Memory"	,
+                  "Sticky Barb"	,
+                  "Stone Plate"	,
+                  "Strawberry Sweet"	,
+                  "Terrain Extender"	,
+                  "Thick Club"	,
+                  "Throat Spray"	,
+                  "Toxic Orb"	,
+                  "Toxic Plate"	,
+                  "Twisted Spoon"	,
+                  "Utility Umbrella"	,
+                  "Water Gem"	,
+                  "Water Memory"	,
+                  "Wave Incense"	,
+                  "Weakness Policy"	,
+                  "Wellspring Mask"	,
+                  "White Herb"	,
+                  "Wide Lens"	,
+                  "Wise Glasses"	,
+                  "Yellow Scarf"	,
+                  "Zap Plate"	,
+                  "Zoom Lens"	]
