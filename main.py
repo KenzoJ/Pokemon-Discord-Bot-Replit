@@ -111,7 +111,7 @@ def main():
     await interaction.response.send_message(f"\n{item}:{new_item}")
 
 
-#testing exporting all 
+#7. exporting all 
   @bot.tree.command(description = "export all battle items")
   @app_commands.describe(part = "either: 1 or 2")
   async def all_items(interaction: discord.Interaction, part: str):
@@ -132,7 +132,14 @@ def main():
       temp_list.append('Number invalid')
     
     await interaction.response.send_message('\n'.join(temp_list),ephemeral = True)
-  
   bot.run(os.environ['SECRET_BOT_KEY'])
+
+'''#8 .TEST Option functionality
+  @bot.tree.command(description = "test_add_mons")
+  @app_commands.describe(iv = 'a a a b b b')
+  async def test_add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'] iv: str, moves: str):
+  await interaction.response.send_message(f"{iv}")'''
+                        
+
 
 main()
