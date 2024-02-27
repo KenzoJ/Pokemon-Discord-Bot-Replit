@@ -11,23 +11,27 @@ from test_classes import export_mon
 import math
 
 
-
 # 1. Give list of all battle items
 # 2. Group slash commands ( https://guide.pycord.dev/interactions/application-commands/slash-commands)
 # 3. Upgrading the options with this tut: (https://www.youtube.com/watch?v=xCkTI8bu0UU)
 
-def main():
-#Discord Intent rules
-  intents = discord.Intents.all()
-  bot = commands.Bot(command_prefix="!",intents=intents)
+class Client(commands.Bot):  
+  def __init__(self):
+    super().__init__(commands.when_mentioned_or('!'), intents=discord.Intents().all())
+    
+    self.cogslist = ["cogs.cog1"]
+    
+  async def setup_hook(self):
+    for ext in self.cogslist:
+      await self.load_extension(ext)
 
 #1: gives an intro message confirming it's on
-  @bot.event
-  async def on_ready():
+  async def on_ready(self):
     print('you in')
-    synced = await bot.tree.sync()
+    synced = await self.tree.sync()
     print(f"Synced {len(synced)} command(s)")
-    
+
+'''
 #2: exporting a mons
   @bot.tree.command(name="export_mons")
   @app_commands.describe(need_mon="Choose a mons.. (ask for /list mons if you need one)")
@@ -40,11 +44,6 @@ def main():
     else:
       await interaction.followup.send("No valid mon")
   
-
-#3: gives you a list of all the mons in the DB
-  @bot.tree.command()
-  async def list_mons(interaction: discord.Interaction):
-    await interaction.response.send_message(f"All the keys: \n{db.keys()}",ephemeral = True)
 
 # 4: Cheat code bot
   @bot.tree.command(name="item_cheat")
@@ -132,14 +131,14 @@ def main():
       temp_list.append('Number invalid')
     
     await interaction.response.send_message('\n'.join(temp_list),ephemeral = True)
-  bot.run(os.environ['SECRET_BOT_KEY'])
 
+'''
 '''#8 .TEST Option functionality
   @bot.tree.command(description = "test_add_mons")
   @app_commands.describe(iv = 'a a a b b b')
   async def test_add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'] iv: str, moves: str):
   await interaction.response.send_message(f"{iv}")'''
                         
+client = Client()
 
-
-main()
+client.run(os.environ['SECRET_BOT_KEY'])
