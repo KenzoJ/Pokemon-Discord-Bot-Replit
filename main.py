@@ -12,8 +12,6 @@ import math
 
 
 
-# 1. Give list of all battle items
-# 2. Group slash commands ( https://guide.pycord.dev/interactions/application-commands/slash-commands)
 # 3. Upgrading the options with this tut: (https://www.youtube.com/watch?v=xCkTI8bu0UU)
 
 def main():
@@ -132,14 +130,9 @@ def main():
       temp_list.append('Number invalid')
     
     await interaction.response.send_message('\n'.join(temp_list),ephemeral = True)
+
+
   bot.run(os.environ['SECRET_BOT_KEY'])
 
-'''#8 .TEST Option functionality
-  @bot.tree.command(description = "test_add_mons")
-  @app_commands.describe(iv = 'a a a b b b')
-  async def test_add_mons(interaction: discord.Interaction, person: typing.Literal['sam','doug', 'cj'] iv: str, moves: str):
-  await interaction.response.send_message(f"{iv}")'''
-                        
-
-
+                      
 main()
